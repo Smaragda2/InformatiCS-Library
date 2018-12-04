@@ -1,0 +1,13 @@
+C:\Users\user1\source\repos\testadopse\testadopse\bin\Debug\testadopse.exe.config
+C:\Users\user1\source\repos\testadopse\testadopse\bin\Debug\testadopse.exe
+C:\Users\user1\source\repos\testadopse\testadopse\bin\Debug\testadopse.pdb
+C:\Users\user1\source\repos\testadopse\testadopse\obj\Debug\testadopse.Form1.resources
+C:\Users\user1\source\repos\testadopse\testadopse\obj\Debug\testadopse.Properties.Resources.resources
+C:\Users\user1\source\repos\testadopse\testadopse\obj\Debug\testadopse.UserControls.HomeUC.resources
+C:\Users\user1\source\repos\testadopse\testadopse\obj\Debug\testadopse.csproj.GenerateResource.cache
+C:\Users\user1\source\repos\testadopse\testadopse\obj\Debug\testadopse.csproj.CoreCompileInputs.cache
+C:\Users\user1\source\repos\testadopse\testadopse\obj\Debug\testadopse.exe
+C:\Users\user1\source\repos\testadopse\testadopse\obj\Debug\testadopse.pdb
+C:\Users\user1\source\repos\testadopse\testadopse\obj\Debug\testadopse.UserControls.AboutUC.resources
+C:\Users\user1\source\repos\testadopse\testadopse\obj\Debug\testadopse.UserControls.ContactUC.resources
+C:\Users\user1\source\repos\testadopse\testadopse\obj\Debug\testadopse.csprojAssemblyReference.cache
