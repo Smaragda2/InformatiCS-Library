@@ -39,6 +39,7 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label2.Location = new System.Drawing.Point(118, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(822, 37);
+            this.label2.Size = new System.Drawing.Size(1239, 55);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ηλεκτρονική Εγκυκλοπέδια για  την επιστήμη των υπολογιστών";
             // 
@@ -92,10 +93,12 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(191, 71);
+            this.textBox1.Location = new System.Drawing.Point(243, 71);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(738, 20);
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.textBox1.Size = new System.Drawing.Size(686, 26);
             this.textBox1.TabIndex = 7;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -104,10 +107,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(46, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 30);
+            this.label1.Size = new System.Drawing.Size(191, 46);
             this.label1.TabIndex = 8;
             this.label1.Text = "Search by :";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // radioButton1
             // 
@@ -116,12 +118,11 @@
             this.radioButton1.ForeColor = System.Drawing.Color.Black;
             this.radioButton1.Location = new System.Drawing.Point(63, 98);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(78, 17);
+            this.radioButton1.Size = new System.Drawing.Size(113, 24);
             this.radioButton1.TabIndex = 9;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Title Based";
             this.radioButton1.UseVisualStyleBackColor = false;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -130,7 +131,7 @@
             this.radioButton2.ForeColor = System.Drawing.Color.Black;
             this.radioButton2.Location = new System.Drawing.Point(63, 121);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(95, 17);
+            this.radioButton2.Size = new System.Drawing.Size(141, 24);
             this.radioButton2.TabIndex = 10;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Content Based";
@@ -143,16 +144,27 @@
             this.radioButton3.ForeColor = System.Drawing.Color.Black;
             this.radioButton3.Location = new System.Drawing.Point(63, 144);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(100, 17);
+            this.radioButton3.Size = new System.Drawing.Size(148, 24);
             this.radioButton3.TabIndex = 11;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Category Based";
             this.radioButton3.UseVisualStyleBackColor = false;
             // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.LightGray;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(243, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(686, 118);
+            this.label3.TabIndex = 12;
+            // 
             // HomeUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -183,5 +195,6 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.Label label3;
     }
 }
