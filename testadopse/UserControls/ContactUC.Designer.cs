@@ -102,7 +102,7 @@
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label6.Location = new System.Drawing.Point(299, 394);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 20);
+            this.label6.Size = new System.Drawing.Size(162, 27);
             this.label6.TabIndex = 24;
             this.label6.Text = "2310 - 324323";
             // 
@@ -121,7 +121,7 @@
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label5.Location = new System.Drawing.Point(299, 356);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(157, 20);
+            this.label5.Size = new System.Drawing.Size(250, 27);
             this.label5.TabIndex = 24;
             this.label5.Text = "2310 - 252432/324323";
             // 
@@ -140,7 +140,7 @@
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label4.Location = new System.Drawing.Point(299, 318);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(217, 20);
+            this.label4.Size = new System.Drawing.Size(342, 27);
             this.label4.TabIndex = 24;
             this.label4.Text = "team7contact@hotmail.com";
             // 
@@ -159,7 +159,7 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label3.Location = new System.Drawing.Point(299, 280);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(216, 20);
+            this.label3.Size = new System.Drawing.Size(330, 27);
             this.label3.TabIndex = 24;
             this.label3.Text = "Αλ. Σβώλου 25,Θεσσαλονικη";
             // 
@@ -222,7 +222,7 @@
             this.BasilhsRole.ForeColor = System.Drawing.Color.Black;
             this.BasilhsRole.Location = new System.Drawing.Point(195, 453);
             this.BasilhsRole.Name = "BasilhsRole";
-            this.BasilhsRole.Size = new System.Drawing.Size(109, 20);
+            this.BasilhsRole.Size = new System.Drawing.Size(169, 31);
             this.BasilhsRole.TabIndex = 5;
             this.BasilhsRole.Text = "@Api Research";
             // 
@@ -233,7 +233,7 @@
             this.BasilhsLabel.ForeColor = System.Drawing.SystemColors.GrayText;
             this.BasilhsLabel.Location = new System.Drawing.Point(167, 426);
             this.BasilhsLabel.Name = "BasilhsLabel";
-            this.BasilhsLabel.Size = new System.Drawing.Size(183, 25);
+            this.BasilhsLabel.Size = new System.Drawing.Size(278, 38);
             this.BasilhsLabel.TabIndex = 5;
             this.BasilhsLabel.Text = "Βασίλης Μοσχόπουλος";
             // 
@@ -244,7 +244,7 @@
             this.XrhstosRole.ForeColor = System.Drawing.Color.Black;
             this.XrhstosRole.Location = new System.Drawing.Point(117, 278);
             this.XrhstosRole.Name = "XrhstosRole";
-            this.XrhstosRole.Size = new System.Drawing.Size(280, 20);
+            this.XrhstosRole.Size = new System.Drawing.Size(431, 31);
             this.XrhstosRole.TabIndex = 5;
             this.XrhstosRole.Text = "@Software Engineering/Project manager";
             // 
@@ -255,7 +255,7 @@
             this.XrhstosLabel.ForeColor = System.Drawing.SystemColors.GrayText;
             this.XrhstosLabel.Location = new System.Drawing.Point(158, 251);
             this.XrhstosLabel.Name = "XrhstosLabel";
-            this.XrhstosLabel.Size = new System.Drawing.Size(196, 25);
+            this.XrhstosLabel.Size = new System.Drawing.Size(292, 38);
             this.XrhstosLabel.TabIndex = 5;
             this.XrhstosLabel.Text = "Χρήστος Καρδαμανίδης";
             // 
@@ -266,7 +266,7 @@
             this.SmaragdaRole.ForeColor = System.Drawing.Color.Black;
             this.SmaragdaRole.Location = new System.Drawing.Point(123, 366);
             this.SmaragdaRole.Name = "SmaragdaRole";
-            this.SmaragdaRole.Size = new System.Drawing.Size(268, 20);
+            this.SmaragdaRole.Size = new System.Drawing.Size(413, 31);
             this.SmaragdaRole.TabIndex = 5;
             this.SmaragdaRole.Text = "@Project Manager/ Database Designer";
             // 
@@ -277,7 +277,7 @@
             this.SmaragdaLabel.ForeColor = System.Drawing.SystemColors.GrayText;
             this.SmaragdaLabel.Location = new System.Drawing.Point(158, 339);
             this.SmaragdaLabel.Name = "SmaragdaLabel";
-            this.SmaragdaLabel.Size = new System.Drawing.Size(198, 25);
+            this.SmaragdaLabel.Size = new System.Drawing.Size(298, 38);
             this.SmaragdaLabel.TabIndex = 5;
             this.SmaragdaLabel.Text = "Σμαράγδα Πρασιανάκη";
             // 
@@ -288,7 +288,7 @@
             this.KyriakosRole.ForeColor = System.Drawing.Color.Black;
             this.KyriakosRole.Location = new System.Drawing.Point(158, 186);
             this.KyriakosRole.Name = "KyriakosRole";
-            this.KyriakosRole.Size = new System.Drawing.Size(182, 20);
+            this.KyriakosRole.Size = new System.Drawing.Size(282, 31);
             this.KyriakosRole.TabIndex = 5;
             this.KyriakosRole.Text = "@UI Designer/ Researcher";
             // 
@@ -299,7 +299,7 @@
             this.Team7Role.ForeColor = System.Drawing.Color.Black;
             this.Team7Role.Location = new System.Drawing.Point(138, 59);
             this.Team7Role.Name = "Team7Role";
-            this.Team7Role.Size = new System.Drawing.Size(219, 20);
+            this.Team7Role.Size = new System.Drawing.Size(333, 31);
             this.Team7Role.TabIndex = 5;
             this.Team7Role.Text = "@Deskop App Developer Team";
             // 
@@ -310,7 +310,7 @@
             this.KyriakosLabel.ForeColor = System.Drawing.SystemColors.GrayText;
             this.KyriakosLabel.Location = new System.Drawing.Point(170, 163);
             this.KyriakosLabel.Name = "KyriakosLabel";
-            this.KyriakosLabel.Size = new System.Drawing.Size(173, 25);
+            this.KyriakosLabel.Size = new System.Drawing.Size(255, 38);
             this.KyriakosLabel.TabIndex = 5;
             this.KyriakosLabel.Text = "Κυριάκος Ιωαννίδης";
             // 
@@ -321,7 +321,7 @@
             this.Team7Label.ForeColor = System.Drawing.SystemColors.GrayText;
             this.Team7Label.Location = new System.Drawing.Point(206, 32);
             this.Team7Label.Name = "Team7Label";
-            this.Team7Label.Size = new System.Drawing.Size(90, 30);
+            this.Team7Label.Size = new System.Drawing.Size(136, 46);
             this.Team7Label.TabIndex = 5;
             this.Team7Label.Text = "Team 7";
             // 
@@ -372,7 +372,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
             this.label2.Location = new System.Drawing.Point(3, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 22);
+            this.label2.Size = new System.Drawing.Size(317, 36);
             this.label2.TabIndex = 1;
             this.label2.Text = "Τα μέλη της ομάδας : ";
             // 
@@ -383,7 +383,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
             this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(403, 22);
+            this.label1.Size = new System.Drawing.Size(611, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Η ομάδα που δημιούργησε την εφαρμογή :";
             // 
@@ -401,9 +401,9 @@
             // 
             this.PanelSplitter.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.PanelSplitter.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PanelSplitter.Location = new System.Drawing.Point(407, 0);
+            this.PanelSplitter.Location = new System.Drawing.Point(614, 0);
             this.PanelSplitter.Name = "PanelSplitter";
-            this.PanelSplitter.Size = new System.Drawing.Size(2, 517);
+            this.PanelSplitter.Size = new System.Drawing.Size(2, 497);
             this.PanelSplitter.TabIndex = 8;
             // 
             // InfoP

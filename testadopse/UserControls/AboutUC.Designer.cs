@@ -63,7 +63,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(118, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(804, 154);
+            this.label2.Size = new System.Drawing.Size(1223, 252);
             this.label2.TabIndex = 1;
             this.label2.Text = resources.GetString("label2.Text");
             // 
@@ -74,7 +74,7 @@
             this.AppName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
             this.AppName.Location = new System.Drawing.Point(464, 23);
             this.AppName.Name = "AppName";
-            this.AppName.Size = new System.Drawing.Size(235, 30);
+            this.AppName.Size = new System.Drawing.Size(349, 43);
             this.AppName.TabIndex = 2;
             this.AppName.Text = "InformatiCS-Library";
             // 
@@ -106,7 +106,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(386, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(353, 48);
+            this.label1.Size = new System.Drawing.Size(532, 78);
             this.label1.TabIndex = 11;
             this.label1.Text = "Ηλεκτρονική Εγκυκλοπέδια για την\r\n      Επιστήμη των Υπολογιστών.";
             // 
@@ -117,7 +117,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(351, 389);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(441, 72);
+            this.label3.Size = new System.Drawing.Size(669, 117);
             this.label3.TabIndex = 11;
             this.label3.Text = "Στόχος μας είναι να δημιουργήσουμε ενα\r\nελενχόμενο περιβάλλον παροχής γνώσης \r\nγι" +
     "α μαθητές και φοιτητές.";
@@ -129,7 +129,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
             this.label4.Location = new System.Drawing.Point(55, 36);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(220, 28);
+            this.label4.Size = new System.Drawing.Size(322, 42);
             this.label4.TabIndex = 12;
             this.label4.Text = "Δημιουργήθηκε : ";
             // 
@@ -140,7 +140,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(55, 68);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(391, 66);
+            this.label6.Size = new System.Drawing.Size(598, 108);
             this.label6.TabIndex = 14;
             this.label6.Text = "Στα πλαίσια του μαθήματος Ανάπτυξη και\r\nΔιαχείριση Ολοκληρωμένων Εφαρμογών\r\n(ΑΔΟΠ" +
     "ΣΕ).";
@@ -152,7 +152,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
             this.label7.Location = new System.Drawing.Point(606, 208);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(159, 28);
+            this.label7.Size = new System.Drawing.Size(235, 42);
             this.label7.TabIndex = 12;
             this.label7.Text = "Καθηγητής: ";
             // 
@@ -163,7 +163,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(607, 236);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(419, 22);
+            this.label8.Size = new System.Drawing.Size(643, 36);
             this.label8.TabIndex = 14;
             this.label8.Text = "Επιβλέπων καθηγητής Μιχάλης Σαλαμπάσης";
             // 
@@ -174,7 +174,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
             this.label9.Location = new System.Drawing.Point(54, 338);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(127, 28);
+            this.label9.Size = new System.Drawing.Size(185, 42);
             this.label9.TabIndex = 12;
             this.label9.Text = "Ομάδα 7: ";
             // 
@@ -185,7 +185,7 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(54, 370);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(246, 88);
+            this.label10.Size = new System.Drawing.Size(373, 144);
             this.label10.TabIndex = 14;
             this.label10.Text = "1)Κυριάκος Ιωαννίδης\r\n2)Βασιλης Μοσχόπουλος\r\n3)Σμαράγδα Πρασιανάκη\r\n4)Χρήστος Καρ" +
     "αμανίδης";
@@ -197,7 +197,7 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
             this.label11.Location = new System.Drawing.Point(606, 535);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(111, 28);
+            this.label11.Size = new System.Drawing.Size(161, 42);
             this.label11.TabIndex = 12;
             this.label11.Text = "Ιδρυμα: ";
             // 
@@ -208,7 +208,7 @@
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(607, 564);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(375, 22);
+            this.label12.Size = new System.Drawing.Size(570, 36);
             this.label12.TabIndex = 14;
             this.label12.Text = "Αλεξάνδρειο Τεχνολογικό Ιδρυμα (ΑΤΕΙ) .";
             // 
@@ -219,7 +219,7 @@
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
             this.label13.Location = new System.Drawing.Point(434, 53);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(187, 28);
+            this.label13.Size = new System.Drawing.Size(274, 42);
             this.label13.TabIndex = 12;
             this.label13.Text = "Λεπτομέρειες :";
             // 
@@ -283,7 +283,7 @@
             this.panel5.Size = new System.Drawing.Size(1076, 646);
             this.panel5.TabIndex = 17;
             // 
-            // AboutUC
+            // HistoryUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
@@ -291,8 +291,8 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Name = "AboutUC";
-            this.Size = new System.Drawing.Size(1042, 1483);
+            this.Name = "HistoryUC";
+            this.Size = new System.Drawing.Size(1016, 1457);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);

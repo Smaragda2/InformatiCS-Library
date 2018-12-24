@@ -153,7 +153,7 @@
             this.textBox1.MaximumSize = new System.Drawing.Size(674, 20);
             this.textBox1.MinimumSize = new System.Drawing.Size(600, 20);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(674, 20);
+            this.textBox1.Size = new System.Drawing.Size(674, 26);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -182,7 +182,7 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(30, 350);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(198, 13);
+            this.label9.Size = new System.Drawing.Size(314, 20);
             this.label9.TabIndex = 6;
             this.label9.Text = "Enos meros toy keimenou apo to Lemma";
             // 
@@ -193,7 +193,7 @@
             this.label8.ForeColor = System.Drawing.Color.Green;
             this.label8.Location = new System.Drawing.Point(29, 335);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(186, 15);
+            this.label8.Size = new System.Drawing.Size(267, 22);
             this.label8.TabIndex = 7;
             this.label8.Text = "Kapoio info sxetika me to lemma";
             // 
@@ -203,7 +203,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(29, 207);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(198, 13);
+            this.label6.Size = new System.Drawing.Size(314, 20);
             this.label6.TabIndex = 8;
             this.label6.Text = "Enos meros toy keimenou apo to Lemma";
             // 
@@ -214,7 +214,7 @@
             this.label5.ForeColor = System.Drawing.Color.Green;
             this.label5.Location = new System.Drawing.Point(30, 192);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(186, 15);
+            this.label5.Size = new System.Drawing.Size(267, 22);
             this.label5.TabIndex = 9;
             this.label5.Text = "Kapoio info sxetika me to lemma";
             // 
@@ -225,7 +225,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label7.Location = new System.Drawing.Point(29, 314);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(112, 21);
+            this.label7.Size = new System.Drawing.Size(169, 32);
             this.label7.TabIndex = 3;
             this.label7.Text = "Title Lemma 3";
             // 
@@ -235,7 +235,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(30, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(198, 13);
+            this.label3.Size = new System.Drawing.Size(314, 20);
             this.label3.TabIndex = 10;
             this.label3.Text = "Enos meros toy keimenou apo to Lemma";
             // 
@@ -246,7 +246,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label4.Location = new System.Drawing.Point(29, 171);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 21);
+            this.label4.Size = new System.Drawing.Size(169, 32);
             this.label4.TabIndex = 4;
             this.label4.Text = "Title Lemma 2";
             // 
@@ -257,7 +257,7 @@
             this.label2.ForeColor = System.Drawing.Color.Green;
             this.label2.Location = new System.Drawing.Point(29, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 15);
+            this.label2.Size = new System.Drawing.Size(267, 22);
             this.label2.TabIndex = 11;
             this.label2.Text = "Kapoio info sxetika me to lemma";
             // 
@@ -268,7 +268,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label1.Location = new System.Drawing.Point(29, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 21);
+            this.label1.Size = new System.Drawing.Size(166, 32);
             this.label1.TabIndex = 5;
             this.label1.Text = "Title Lemma 1";
             // 
@@ -282,7 +282,7 @@
             // 
             // ViewUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
