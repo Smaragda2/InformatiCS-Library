@@ -14,7 +14,7 @@ using Lucene.Net.Search;
 using Lucene.Net.QueryParsers;
 using System.Windows.Forms;
 using System.Data.OleDb;
-using testadopse.InformatiCS_LibraryDataSet1TableAdapters;
+using testadopse.InformatiCS_LibraryDataSetTableAdapters;
 using System.Data;
 
 public class Searcher

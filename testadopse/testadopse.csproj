@@ -68,11 +68,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="InformatiCS_LibraryDataSet1.cs">
-      <DependentUpon>InformatiCS_LibraryDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="InformatiCS_LibraryDataSet1.designer.cs">
-      <DependentUpon>InformatiCS_LibraryDataSet1.cs</DependentUpon>
+    <Compile Include="InformatiCS_LibraryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformatiCS_LibraryDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -144,12 +143,16 @@
     <EmbeddedResource Include="UserControls\ViewUC.resx">
       <DependentUpon>ViewUC.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="InformatiCS_LibraryDataSet1.xsc">
-      <DependentUpon>InformatiCS_LibraryDataSet1.xsd</DependentUpon>
+    <None Include="InformatiCS_LibraryDataSet.xsc">
+      <DependentUpon>InformatiCS_LibraryDataSet.xsd</DependentUpon>
     </None>
-    <None Include="InformatiCS_LibraryDataSet1.xsd" />
-    <None Include="InformatiCS_LibraryDataSet1.xss">
-      <DependentUpon>InformatiCS_LibraryDataSet1.xsd</DependentUpon>
+    <None Include="InformatiCS_LibraryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InformatiCS_LibraryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InformatiCS_LibraryDataSet.xss">
+      <DependentUpon>InformatiCS_LibraryDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -164,11 +167,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="InformatiCS_Library.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

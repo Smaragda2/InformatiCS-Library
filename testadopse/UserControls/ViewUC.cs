@@ -27,6 +27,17 @@ namespace testadopse.UserControls
             // Call the PrintPage method
         }
 
-        
+        public string GetHistory()
+        {
+            string results = null;
+
+
+
+            return results;
+        }
+
+        private void SearchB_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

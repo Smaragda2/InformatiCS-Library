@@ -136,6 +136,7 @@
             this.SearchB.Size = new System.Drawing.Size(55, 20);
             this.SearchB.TabIndex = 11;
             this.SearchB.UseVisualStyleBackColor = false;
+            this.SearchB.Click += new System.EventHandler(this.SearchB_Click);
             // 
             // pictureBox1
             // 
