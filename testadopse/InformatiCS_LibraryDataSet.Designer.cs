@@ -5490,11 +5490,17 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT HistoryID, LemmaID, HistoryTimestamp FROM History_keep_Lemma";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT hl.HistoryID, hl.LemmaID, l.Lname, hl.HistoryTimestamp\r\nFROM   ((History_k" +
+                "eep_Lemma hl INNER JOIN\r\n             Lemma l ON hl.LemmaID = l.ID) INNER JOIN\r\n" +
+                "             History h ON hl.HistoryID = h.ID)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5516,6 +5522,17 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual InformatiCS_LibraryDataSet.History_keep_LemmaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            InformatiCS_LibraryDataSet.History_keep_LemmaDataTable dataTable = new InformatiCS_LibraryDataSet.History_keep_LemmaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual InformatiCS_LibraryDataSet.History_keep_LemmaDataTable GetAllHistoryData() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
             InformatiCS_LibraryDataSet.History_keep_LemmaDataTable dataTable = new InformatiCS_LibraryDataSet.History_keep_LemmaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

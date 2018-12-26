@@ -1,17 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using testadopse.InformatiCS_LibraryDataSetTableAdapters;
 
 namespace testadopse
 {
     class SmaragdasClass
     {
-        string article = null;
+        private string article = null;
+        private History_keep_LemmaTableAdapter history_Keep_LemmaTableAdapter = new History_keep_LemmaTableAdapter();
+
         /// <summary>
         /// Parameters:
         /// <para>PrintDialog sent the existing printDialog.</para>
@@ -38,5 +42,27 @@ namespace testadopse
             e.Graphics.DrawString(article, new Font("Arial", 14, FontStyle.Bold), Brushes.Black, 150, 125);
         }
 
+        /// <summary>
+        /// Returns an array of string.
+        /// <para>Split each result by ',' delimiter, the first part is the Lemma name,</para>
+        /// <para>and the second part is the timestamp of the history.</para>
+        /// </summary>
+        public string[] GetAllHistoryData()
+        {
+            
+            string[] results = null;
+            string rowData = null;
+            int i = 0;
+            DataTable newTable = history_Keep_LemmaTableAdapter.GetAllHistoryData();
+            results = new string[newTable.Rows.Count];
+
+            foreach (DataRow row in newTable.Rows)
+            {
+                rowData = row[2].ToString() + "," + row[3].ToString();
+                results[i++] = rowData;
+                Console.WriteLine(i-1+" = "+rowData);
+            }
+            return results;
+        }
     }
 }

@@ -254,7 +254,19 @@ WHERE (c.Cname LIKE '%' + ? + '%')</CommandText>
               <Mapping SourceColumn="LemmaID" DataSetColumn="LemmaID" />
               <Mapping SourceColumn="HistoryTimestamp" DataSetColumn="HistoryTimestamp" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="FinalConnectionString (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetAllHistoryData" GetMethodModifier="Public" GetMethodName="GetAllHistoryData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetAllHistoryData" UserSourceName="GetAllHistoryData">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT hl.HistoryID, hl.LemmaID, l.Lname, hl.HistoryTimestamp
+FROM   ((History_keep_Lemma hl INNER JOIN
+             Lemma l ON hl.LemmaID = l.ID) INNER JOIN
+             History h ON hl.HistoryID = h.ID)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LemmaTableAdapter" GeneratorDataComponentClassName="LemmaTableAdapter" Name="Lemma" UserDataComponentName="LemmaTableAdapter">
             <MainSource>
