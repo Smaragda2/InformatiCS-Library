@@ -50,14 +50,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.HistoryB = new System.Windows.Forms.Button();
             this.ContentP = new System.Windows.Forms.Panel();
-            this.timer = new System.Windows.Forms.Timer(this.components);
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.aboutUC1 = new testadopse.UserControls.HistoryUC();
             this.viewLemma1 = new testadopse.UserControls.ViewLemma();
             this.contactUC1 = new testadopse.UserControls.ContactUC();
             this.categoriesUC1 = new testadopse.UserControls.CategoriesUC();
             this.viewUC1 = new testadopse.UserControls.ViewUC();
             this.homeUC1 = new testadopse.UserControls.HomeUC();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.HeaderP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -168,6 +168,7 @@
             this.HeaderP.Name = "HeaderP";
             this.HeaderP.Size = new System.Drawing.Size(1280, 39);
             this.HeaderP.TabIndex = 1;
+            this.HeaderP.Paint += new System.Windows.Forms.PaintEventHandler(this.HeaderP_Paint);
             // 
             // pictureBox1
             // 
@@ -243,7 +244,7 @@
             this.AppName.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.AppName.Location = new System.Drawing.Point(49, 4);
             this.AppName.Name = "AppName";
-            this.AppName.Size = new System.Drawing.Size(235, 30);
+            this.AppName.Size = new System.Drawing.Size(349, 43);
             this.AppName.TabIndex = 0;
             this.AppName.Text = "InformatiCS-Library";
             // 
@@ -288,7 +289,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(60, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 24);
+            this.label2.Size = new System.Drawing.Size(106, 39);
             this.label2.TabIndex = 13;
             this.label2.Text = "Menu";
             // 
@@ -361,15 +362,6 @@
             this.ContentP.TabIndex = 8;
             this.ContentP.Click += new System.EventHandler(this.ChangeColour);
             // 
-            // timer
-            // 
-            this.timer.Interval = 30;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // aboutUC1
             // 
             this.aboutUC1.AutoScroll = true;
@@ -433,9 +425,18 @@
             this.homeUC1.Size = new System.Drawing.Size(1110, 517);
             this.homeUC1.TabIndex = 0;
             // 
+            // timer
+            // 
+            this.timer.Interval = 30;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1280, 556);

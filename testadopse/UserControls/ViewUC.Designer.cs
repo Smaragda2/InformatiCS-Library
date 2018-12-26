@@ -48,6 +48,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -103,6 +105,7 @@
             this.button2.Size = new System.Drawing.Size(42, 42);
             this.button2.TabIndex = 11;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -133,6 +136,7 @@
             this.SearchB.Size = new System.Drawing.Size(55, 20);
             this.SearchB.TabIndex = 11;
             this.SearchB.UseVisualStyleBackColor = false;
+            this.SearchB.Click += new System.EventHandler(this.SearchB_Click);
             // 
             // pictureBox1
             // 
@@ -280,6 +284,14 @@
             this.vScrollBar1.Size = new System.Drawing.Size(14, 439);
             this.vScrollBar1.TabIndex = 2;
             // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
             // ViewUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -324,5 +336,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.VScrollBar vScrollBar1;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
