@@ -1,2 +1,2 @@
-# InformatiCS-Library
-Desktop Encyclopedia ( Informatics &amp; Computer Science)
+# InformatiCS-Library2
+Desktop Encyclopedia
