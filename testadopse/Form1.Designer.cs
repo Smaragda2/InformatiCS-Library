@@ -50,7 +50,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.HistoryB = new System.Windows.Forms.Button();
             this.ContentP = new System.Windows.Forms.Panel();
-            this.aboutUC1 = new testadopse.UserControls.HistoryUC();
+            this.help1 = new testadopse.UserControls.Help();
+            this.aboutUC1 = new testadopse.UserControls.AboutUC();
             this.viewLemma1 = new testadopse.UserControls.ViewLemma();
             this.contactUC1 = new testadopse.UserControls.ContactUC();
             this.categoriesUC1 = new testadopse.UserControls.CategoriesUC();
@@ -58,6 +59,7 @@
             this.homeUC1 = new testadopse.UserControls.HomeUC();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.historyUC1 = new testadopse.UserControls.HistoryUC();
             this.HeaderP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -153,7 +155,7 @@
             this.HelpB.Text = "          Help";
             this.HelpB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HelpB.UseVisualStyleBackColor = true;
-            this.HelpB.Click += new System.EventHandler(this.ChangeColour);
+            this.HelpB.Click += new System.EventHandler(this.HelpB_Click);
             // 
             // HeaderP
             // 
@@ -168,7 +170,6 @@
             this.HeaderP.Name = "HeaderP";
             this.HeaderP.Size = new System.Drawing.Size(1280, 39);
             this.HeaderP.TabIndex = 1;
-            this.HeaderP.Paint += new System.Windows.Forms.PaintEventHandler(this.HeaderP_Paint);
             // 
             // pictureBox1
             // 
@@ -244,7 +245,7 @@
             this.AppName.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.AppName.Location = new System.Drawing.Point(49, 4);
             this.AppName.Name = "AppName";
-            this.AppName.Size = new System.Drawing.Size(349, 43);
+            this.AppName.Size = new System.Drawing.Size(235, 30);
             this.AppName.TabIndex = 0;
             this.AppName.Text = "InformatiCS-Library";
             // 
@@ -289,7 +290,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(60, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 39);
+            this.label2.Size = new System.Drawing.Size(69, 24);
             this.label2.TabIndex = 13;
             this.label2.Text = "Menu";
             // 
@@ -343,12 +344,12 @@
             this.HistoryB.Text = "          History";
             this.HistoryB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HistoryB.UseVisualStyleBackColor = true;
-            this.HistoryB.Click += new System.EventHandler(this.ChangeColour);
+            this.HistoryB.Click += new System.EventHandler(this.HistoryB_Click);
             // 
             // ContentP
             // 
-            this.ContentP.AutoSize = true;
-            this.ContentP.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ContentP.Controls.Add(this.historyUC1);
+            this.ContentP.Controls.Add(this.help1);
             this.ContentP.Controls.Add(this.aboutUC1);
             this.ContentP.Controls.Add(this.viewLemma1);
             this.ContentP.Controls.Add(this.contactUC1);
@@ -361,6 +362,17 @@
             this.ContentP.Size = new System.Drawing.Size(1110, 517);
             this.ContentP.TabIndex = 8;
             this.ContentP.Click += new System.EventHandler(this.ChangeColour);
+            // 
+            // help1
+            // 
+            this.help1.AutoScroll = true;
+            this.help1.BackColor = System.Drawing.Color.White;
+            this.help1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.help1.Location = new System.Drawing.Point(0, 0);
+            this.help1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.help1.Name = "help1";
+            this.help1.Size = new System.Drawing.Size(1110, 517);
+            this.help1.TabIndex = 6;
             // 
             // aboutUC1
             // 
@@ -434,9 +446,18 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // historyUC1
+            // 
+            this.historyUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.historyUC1.Location = new System.Drawing.Point(0, 0);
+            this.historyUC1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.historyUC1.Name = "historyUC1";
+            this.historyUC1.Size = new System.Drawing.Size(1110, 517);
+            this.historyUC1.TabIndex = 7;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1280, 556);
@@ -460,7 +481,6 @@
             this.ContentP.ResumeLayout(false);
             this.ContentP.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -492,7 +512,9 @@
         private UserControls.ContactUC contactUC1;
         private System.Windows.Forms.Timer timer1;
         private UserControls.ViewLemma viewLemma1;
-        private UserControls.HistoryUC aboutUC1;
+        private UserControls.AboutUC aboutUC1;
+        private UserControls.Help help1;
+        private UserControls.HistoryUC historyUC1;
     }
 }
 

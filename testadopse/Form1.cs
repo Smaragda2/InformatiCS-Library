@@ -17,6 +17,7 @@ namespace testadopse
         bool Hidden;           //Metabliti gia na me boithisei sto timer
 
 
+
         // ***************************************************************************
         // Methodos gia na ginei h efarmogh me kyklikes gwnies
         // ***************************************************************************
@@ -42,7 +43,11 @@ namespace testadopse
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             homeUC1.BringToFront();
-            Hidden = false;
+            Hidden = false; 
+
+
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -95,7 +100,14 @@ namespace testadopse
 
         private void HelpB_Click(object sender, EventArgs e)
         {
-       
+            help1.BringToFront();
+            ChangeColour(HelpB, e);
+        }
+
+        private void HistoryB_Click(object sender, EventArgs e)
+        {
+            historyUC1.BringToFront();
+            ChangeColour(HistoryB, e);
         }
 
     
@@ -206,9 +218,6 @@ namespace testadopse
             }
         }
 
-        private void HeaderP_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
     }
 }
