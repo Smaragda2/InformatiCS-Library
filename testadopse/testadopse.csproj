@@ -89,6 +89,12 @@
     <Compile Include="UserControls\ContactUC.Designer.cs">
       <DependentUpon>ContactUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\HistoryUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\HistoryUC.Designer.cs">
+      <DependentUpon>HistoryUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\HomeUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -100,6 +106,30 @@
     </Compile>
     <Compile Include="UserControls\.Designer.cs">
       <DependentUpon>CategoriesUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MemberBM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberBM.Designer.cs">
+      <DependentUpon>MemberBM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MemberKI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberKI.Designer.cs">
+      <DependentUpon>MemberKI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MemberSP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberSP.Designer.cs">
+      <DependentUpon>MemberSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MemberXK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberXK.Designer.cs">
+      <DependentUpon>MemberXK.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ViewLemma.cs">
       <SubType>UserControl</SubType>
@@ -131,11 +161,26 @@
     <EmbeddedResource Include="UserControls\ContactUC.resx">
       <DependentUpon>ContactUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\HistoryUC.resx">
+      <DependentUpon>HistoryUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\HomeUC.resx">
       <DependentUpon>HomeUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CategoriesUC.resx">
       <DependentUpon>CategoriesUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MemberBM.resx">
+      <DependentUpon>MemberBM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MemberKI.resx">
+      <DependentUpon>MemberKI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MemberSP.resx">
+      <DependentUpon>MemberSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MemberXK.resx">
+      <DependentUpon>MemberXK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ViewLemma.resx">
       <DependentUpon>ViewLemma.cs</DependentUpon>
