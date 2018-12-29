@@ -115,7 +115,17 @@ FROM   (Bookmark b INNER JOIN
               <Mapping SourceColumn="ID" DataSetColumn="ID" />
               <Mapping SourceColumn="Cname" DataSetColumn="Cname" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="FinalConnectionString (Settings)" DbObjectName="Category" DbObjectType="Table" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetAllCategories" GetMethodModifier="Public" GetMethodName="GetAllCategories" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetAllCategories" UserSourceName="GetAllCategories">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, Cname
+FROM   Category</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Category_LemmaTableAdapter" GeneratorDataComponentClassName="Category_LemmaTableAdapter" Name="Category_Lemma" UserDataComponentName="Category_LemmaTableAdapter">
             <MainSource>

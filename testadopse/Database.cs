@@ -17,6 +17,9 @@ namespace testadopse
         private History_keep_LemmaTableAdapter history_Keep_LemmaTableAdapter = new History_keep_LemmaTableAdapter();
         private Lemma_MediaTableAdapter lemma_MediaTableAdapter = new Lemma_MediaTableAdapter();
         private BookmarkTableAdapter bookmarkTableAdapter = new BookmarkTableAdapter();
+        private CategoryTableAdapter categoryTableAdapter = new CategoryTableAdapter();
+        int i = 0;
+
 
         /// <summary>
         /// Parameters:
@@ -55,7 +58,7 @@ namespace testadopse
 
             string[] results = null;
             string rowData = null;
-            int i = 0;
+            i = 0;
             DataTable newTable = history_Keep_LemmaTableAdapter.GetAllHistoryData();
             results = new string[newTable.Rows.Count];
 
@@ -88,7 +91,7 @@ namespace testadopse
         public string[] GetLemmaImagesPath(string lemmaName)
         {
             string[] imagesPath = null;
-            int i = 0;
+            i = 0;
             DataTable dataTable = lemma_MediaTableAdapter.GetImagePathsByLemmaName(lemmaName);
             imagesPath = new string[dataTable.Rows.Count];
             foreach (DataRow row in dataTable.Rows)
@@ -108,12 +111,29 @@ namespace testadopse
             string[] bookmarks = null;
             DataTable dataTable = bookmarkTableAdapter.GetAllBookmarks();
             bookmarks = new string[dataTable.Rows.Count];
-            int i = 0;
+            i = 0;
             foreach (DataRow row in dataTable.Rows)
             {
                 bookmarks[i++] = row[1] + "," + row[3];
             }
             return bookmarks;
+        }
+
+        /// <summary>
+        /// Returns a string array with the categories.
+        /// <para>Each string in the array has the Category name.</para>
+        /// </summary>
+        public string[] GetAllCategories()
+        {
+            string[] categories = null;
+            DataTable dataTable = categoryTableAdapter.GetAllCategories();
+            categories = new string[dataTable.Rows.Count];
+            i = 0;
+            foreach (DataRow row in dataTable.Rows)
+            {
+                categories[i++] = row[1].ToString();
+            }
+            return categories;
         }
     }
 }
