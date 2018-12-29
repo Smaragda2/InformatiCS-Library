@@ -18,6 +18,7 @@ namespace testadopse
         private Lemma_MediaTableAdapter lemma_MediaTableAdapter = new Lemma_MediaTableAdapter();
         private BookmarkTableAdapter bookmarkTableAdapter = new BookmarkTableAdapter();
         private CategoryTableAdapter categoryTableAdapter = new CategoryTableAdapter();
+        private Category_LemmaTableAdapter category_LemmaTableAdapter = new Category_LemmaTableAdapter();
         int i = 0;
 
 
@@ -134,6 +135,23 @@ namespace testadopse
                 categories[i++] = row[1].ToString();
             }
             return categories;
+        }
+
+        /// <summary>
+        /// Returns a string array with the Lemma Name that exist in the Category.
+        /// <para>Give the category Name to get all lemma name that exists in.</para>
+        /// </summary>
+        public string[] GetAllLemmasTitlesFromCategory(string categoryName)
+        {
+            string[] lemmasTitles = null;
+            i = 0;
+            DataTable dataTable = category_LemmaTableAdapter.GetLemmasNameByCategoryName(categoryName);
+            lemmasTitles = new string[dataTable.Rows.Count];
+            foreach (DataRow row in dataTable.Rows)
+            {
+                lemmasTitles[i++] = row[2].ToString();
+            }
+            return lemmasTitles;
         }
     }
 }
