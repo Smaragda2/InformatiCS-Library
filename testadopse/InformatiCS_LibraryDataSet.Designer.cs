@@ -6120,18 +6120,31 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[3];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT LemmaID, MediaID FROM Lemma_Media";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT m.Contect\r\nFROM   ((Lemma_Media lm INNER JOIN\r\n             Media m ON lm." +
-                "MediaID = m.ID) INNER JOIN\r\n             Lemma l ON lm.LemmaID = l.ID)\r\nWHERE (l" +
-                ".Lname = ?)";
+            this._commandCollection[1].CommandText = @"SELECT  lm.*,m.Contect
+FROM   ((Lemma_Media lm INNER JOIN
+             Media m ON lm.MediaID = m.ID) INNER JOIN
+             Lemma l ON lm.LemmaID = l.ID)
+WHERE (l.Lname = ?) AND (m.data_type LIKE 'jpg' OR
+             m.data_type LIKE 'png' OR
+             m.data_type LIKE 'svg' OR
+             m.data_type LIKE 'gif' OR
+             m.data_type LIKE 'bmp')";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Lname", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lname", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT m.Contect\r\nFROM   ((Lemma_Media lm INNER JOIN\r\n             Media m ON lm." +
+                "MediaID = m.ID) INNER JOIN\r\n             Lemma l ON lm.LemmaID = l.ID)\r\nWHERE (l" +
+                ".Lname = ?) AND (m.data_type = \'text\' OR\r\n             m.data_type = \'txt\')";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Lname", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lname", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6153,6 +6166,23 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual InformatiCS_LibraryDataSet.Lemma_MediaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            InformatiCS_LibraryDataSet.Lemma_MediaDataTable dataTable = new InformatiCS_LibraryDataSet.Lemma_MediaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual InformatiCS_LibraryDataSet.Lemma_MediaDataTable GetImagePathsByLemmaName(string Lname) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((Lname == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Lname));
+            }
             InformatiCS_LibraryDataSet.Lemma_MediaDataTable dataTable = new InformatiCS_LibraryDataSet.Lemma_MediaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -6270,7 +6300,7 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual object GetLemmaContentByLemmaName(string Lname) {
-            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[1];
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[2];
             if ((Lname == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }

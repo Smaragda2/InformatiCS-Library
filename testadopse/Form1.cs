@@ -15,7 +15,6 @@ namespace testadopse
     {
         int panelwidth = 170 ; //Metabliti gia na me boithisei sto timer
         bool Hidden;           //Metabliti gia na me boithisei sto timer
-        Database database = new Database();
 
 
         // ***************************************************************************
@@ -40,15 +39,10 @@ namespace testadopse
         {
            
             InitializeComponent();
-            database.GetLemmaContent("Java");
-
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             homeUC1.BringToFront();
             Hidden = false;
-
-
-
         }
 
         private void Form1_Load(object sender, EventArgs e)

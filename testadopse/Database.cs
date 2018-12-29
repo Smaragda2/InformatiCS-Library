@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
@@ -67,15 +66,34 @@ namespace testadopse
             return results;
         }
 
-
+        /// <summary>
+        /// Get the text Content of a Lemma by lemma name.
+        /// <para>Give the name of the Lemma that you want to read!</para>
+        /// <para>Returns a string with the text Content of the Lemma.</para>
+        /// </summary>
         public string GetLemmaContent(string lemmaName)
         {
             string content = null;
-
-            Object newObject = lemma_MediaTableAdapter.GetLemmaContentByLemmaName(lemmaName);
-            content = newObject.ToString();
-            Debug.WriteLine("Content = " + content);
+            content = lemma_MediaTableAdapter.GetLemmaContentByLemmaName(lemmaName).ToString();
             return content;
+        }
+
+        /// <summary>
+        /// Get the paths of Lemmas Images.
+        /// <para>Give the Lemma Name to get the images path for.</para>
+        /// <para>Returns a string array with the path of each image.</para>
+        /// </summary>
+        public string[] GetLemmaImagesPath(string lemmaName)
+        {
+            string[] imagesPath = null;
+            int i = 0;
+            DataTable dataTable = lemma_MediaTableAdapter.GetImagePathsByLemmaName(lemmaName);
+            imagesPath = new string[dataTable.Rows.Count];
+            foreach (DataRow row in dataTable.Rows)
+            {
+                imagesPath[i++] = row[0].ToString();
+            }
+            return imagesPath;
         }
     }
 }
