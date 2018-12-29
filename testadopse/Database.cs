@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
@@ -11,10 +12,11 @@ using testadopse.InformatiCS_LibraryDataSetTableAdapters;
 
 namespace testadopse
 {
-    class SmaragdasClass
+    class Database
     {
         private string article = null;
         private History_keep_LemmaTableAdapter history_Keep_LemmaTableAdapter = new History_keep_LemmaTableAdapter();
+        private Lemma_MediaTableAdapter lemma_MediaTableAdapter = new Lemma_MediaTableAdapter();
 
         /// <summary>
         /// Parameters:
@@ -23,7 +25,7 @@ namespace testadopse
         /// <para>title sent the Label that have the Lemma tilte.</para>
         /// <para>content sent the Label tha have the Lemma content.</para>
         /// </summary>
-        public void PrintLemma(PrintDialog printDialog1, PrintDocument printDocument1, Label title,Label content)
+        public void PrintLemma(PrintDialog printDialog1, PrintDocument printDocument1, Label title, Label content)
         {
             article = title.Text + "\n" + content.Text;
             printDialog1.Document = printDocument1;
@@ -49,7 +51,7 @@ namespace testadopse
         /// </summary>
         public string[] GetAllHistoryData()
         {
-            
+
             string[] results = null;
             string rowData = null;
             int i = 0;
@@ -60,9 +62,20 @@ namespace testadopse
             {
                 rowData = row[2].ToString() + "," + row[3].ToString();
                 results[i++] = rowData;
-                Console.WriteLine(i-1+" = "+rowData);
+                Console.WriteLine(i - 1 + " = " + rowData);
             }
             return results;
+        }
+
+
+        public string GetLemmaContent(string lemmaName)
+        {
+            string content = null;
+
+            Object newObject = lemma_MediaTableAdapter.GetLemmaContentByLemmaName(lemmaName);
+            content = newObject.ToString();
+            Debug.WriteLine("Content = " + content);
+            return content;
         }
     }
 }
