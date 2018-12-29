@@ -89,6 +89,12 @@
     <Compile Include="UserControls\ContactUC.Designer.cs">
       <DependentUpon>ContactUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Help.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\HistoryUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,6 +137,12 @@
     <Compile Include="UserControls\MemberXK.Designer.cs">
       <DependentUpon>MemberXK.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Team7.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Team7.Designer.cs">
+      <DependentUpon>Team7.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ViewLemma.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,6 +173,9 @@
     <EmbeddedResource Include="UserControls\ContactUC.resx">
       <DependentUpon>ContactUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\HistoryUC.resx">
       <DependentUpon>HistoryUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MemberXK.resx">
       <DependentUpon>MemberXK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Team7.resx">
+      <DependentUpon>Team7.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ViewLemma.resx">
       <DependentUpon>ViewLemma.cs</DependentUpon>
