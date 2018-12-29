@@ -4235,11 +4235,16 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, Bname, LemmaID FROM Bookmark";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT b.ID, b.Bname, b.LemmaID, l.Lname\r\nFROM   (Bookmark b INNER JOIN\r\n        " +
+                "     Lemma l ON b.LemmaID = l.ID)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4261,6 +4266,17 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual InformatiCS_LibraryDataSet.BookmarkDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            InformatiCS_LibraryDataSet.BookmarkDataTable dataTable = new InformatiCS_LibraryDataSet.BookmarkDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual InformatiCS_LibraryDataSet.BookmarkDataTable GetAllBookmarks() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
             InformatiCS_LibraryDataSet.BookmarkDataTable dataTable = new InformatiCS_LibraryDataSet.BookmarkDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -4575,11 +4591,15 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, Cname FROM Category";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT ID, Cname\r\nFROM   Category";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4601,6 +4621,17 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual InformatiCS_LibraryDataSet.CategoryDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            InformatiCS_LibraryDataSet.CategoryDataTable dataTable = new InformatiCS_LibraryDataSet.CategoryDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual InformatiCS_LibraryDataSet.CategoryDataTable GetAllCategories() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
             InformatiCS_LibraryDataSet.CategoryDataTable dataTable = new InformatiCS_LibraryDataSet.CategoryDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -4886,7 +4917,7 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[3];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT CategoryID, LemmaID FROM Category_Lemma";
@@ -4898,6 +4929,13 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
                 "    Lemma l ON cl.LemmaID = l.ID)\r\nWHERE (c.Cname LIKE \'%\' + ? + \'%\')";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Cname", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cname", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT cl.CategoryID, cl.LemmaID, l.Lname\r\nFROM   ((Category_Lemma cl INNER JOIN\r" +
+                "\n             Lemma l ON cl.LemmaID = l.ID) INNER JOIN\r\n             Category c " +
+                "ON cl.CategoryID = c.ID)\r\nWHERE (c.Cname = ?)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Cname", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cname", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4930,6 +4968,23 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual InformatiCS_LibraryDataSet.Category_LemmaDataTable GetDataByCategoryName(string Cname) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((Cname == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Cname));
+            }
+            InformatiCS_LibraryDataSet.Category_LemmaDataTable dataTable = new InformatiCS_LibraryDataSet.Category_LemmaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual InformatiCS_LibraryDataSet.Category_LemmaDataTable GetLemmasNameByCategoryName(string Cname) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((Cname == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -6120,11 +6175,31 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
+            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[3];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT LemmaID, MediaID FROM Lemma_Media";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT  lm.*,m.Contect
+FROM   ((Lemma_Media lm INNER JOIN
+             Media m ON lm.MediaID = m.ID) INNER JOIN
+             Lemma l ON lm.LemmaID = l.ID)
+WHERE (l.Lname = ?) AND (m.data_type LIKE 'jpg' OR
+             m.data_type LIKE 'png' OR
+             m.data_type LIKE 'svg' OR
+             m.data_type LIKE 'gif' OR
+             m.data_type LIKE 'bmp')";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Lname", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lname", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[2] = new global::System.Data.OleDb.OleDbCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT m.Contect\r\nFROM   ((Lemma_Media lm INNER JOIN\r\n             Media m ON lm." +
+                "MediaID = m.ID) INNER JOIN\r\n             Lemma l ON lm.LemmaID = l.ID)\r\nWHERE (l" +
+                ".Lname = ?) AND (m.data_type = \'text\' OR\r\n             m.data_type = \'txt\')";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Lname", global::System.Data.OleDb.OleDbType.WChar, 255, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lname", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6146,6 +6221,23 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual InformatiCS_LibraryDataSet.Lemma_MediaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            InformatiCS_LibraryDataSet.Lemma_MediaDataTable dataTable = new InformatiCS_LibraryDataSet.Lemma_MediaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual InformatiCS_LibraryDataSet.Lemma_MediaDataTable GetImagePathsByLemmaName(string Lname) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((Lname == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Lname));
+            }
             InformatiCS_LibraryDataSet.Lemma_MediaDataTable dataTable = new InformatiCS_LibraryDataSet.Lemma_MediaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -6257,6 +6349,40 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(int Original_LemmaID, int Original_MediaID) {
             return this.Update(Original_LemmaID, Original_MediaID, Original_LemmaID, Original_MediaID);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual object GetLemmaContentByLemmaName(string Lname) {
+            global::System.Data.OleDb.OleDbCommand command = this.CommandCollection[2];
+            if ((Lname == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(Lname));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            object returnValue;
+            try {
+                returnValue = command.ExecuteScalar();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
         }
     }
     
