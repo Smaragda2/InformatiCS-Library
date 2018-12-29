@@ -29,19 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContactUC));
-            this.Team7P = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.TwitterB = new System.Windows.Forms.Button();
-            this.FacebookB = new System.Windows.Forms.Button();
-            this.ChromeB = new System.Windows.Forms.Button();
             this.BasilhsRole = new System.Windows.Forms.Label();
             this.BasilhsLabel = new System.Windows.Forms.Label();
             this.XrhstosRole = new System.Windows.Forms.Label();
@@ -61,159 +48,20 @@
             this.TeamPhoto = new System.Windows.Forms.PictureBox();
             this.PanelSplitter = new System.Windows.Forms.Panel();
             this.InfoP = new System.Windows.Forms.Panel();
-            this.Team7P.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.memberXK1 = new testadopse.UserControls.MemberXK();
+            this.memberSP1 = new testadopse.UserControls.MemberSP();
+            this.memberBM1 = new testadopse.UserControls.MemberBM();
+            this.memberKI1 = new testadopse.UserControls.MemberKI();
+            this.team71 = new testadopse.UserControls.Team7();
             ((System.ComponentModel.ISupportInitialize)(this.BasilhsPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SmaragdaPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XrhstosPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KyriakosPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TeamPhoto)).BeginInit();
             this.InfoP.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Team7P
-            // 
-            this.Team7P.AutoSize = true;
-            this.Team7P.Controls.Add(this.label6);
-            this.Team7P.Controls.Add(this.pictureBox5);
-            this.Team7P.Controls.Add(this.label5);
-            this.Team7P.Controls.Add(this.pictureBox4);
-            this.Team7P.Controls.Add(this.label4);
-            this.Team7P.Controls.Add(this.pictureBox3);
-            this.Team7P.Controls.Add(this.label3);
-            this.Team7P.Controls.Add(this.pictureBox2);
-            this.Team7P.Controls.Add(this.pictureBox1);
-            this.Team7P.Controls.Add(this.TwitterB);
-            this.Team7P.Controls.Add(this.FacebookB);
-            this.Team7P.Controls.Add(this.ChromeB);
-            this.Team7P.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Team7P.Location = new System.Drawing.Point(409, 0);
-            this.Team7P.Name = "Team7P";
-            this.Team7P.Size = new System.Drawing.Size(701, 517);
-            this.Team7P.TabIndex = 10;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label6.Location = new System.Drawing.Point(299, 394);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(162, 27);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "2310 - 324323";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(269, 391);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox5.TabIndex = 23;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label5.Location = new System.Drawing.Point(299, 356);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(250, 27);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "2310 - 252432/324323";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(269, 353);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox4.TabIndex = 23;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label4.Location = new System.Drawing.Point(299, 318);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(342, 27);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "team7contact@hotmail.com";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(269, 315);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox3.TabIndex = 23;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label3.Location = new System.Drawing.Point(299, 280);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(330, 27);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Αλ. Σβώλου 25,Θεσσαλονικη";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(269, 277);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(203, 52);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(367, 212);
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
-            // 
-            // TwitterB
-            // 
-            this.TwitterB.FlatAppearance.BorderSize = 0;
-            this.TwitterB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TwitterB.Image = ((System.Drawing.Image)(resources.GetObject("TwitterB.Image")));
-            this.TwitterB.Location = new System.Drawing.Point(114, 130);
-            this.TwitterB.Name = "TwitterB";
-            this.TwitterB.Size = new System.Drawing.Size(40, 40);
-            this.TwitterB.TabIndex = 21;
-            this.TwitterB.UseVisualStyleBackColor = true;
-            // 
-            // FacebookB
-            // 
-            this.FacebookB.FlatAppearance.BorderSize = 0;
-            this.FacebookB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FacebookB.Image = ((System.Drawing.Image)(resources.GetObject("FacebookB.Image")));
-            this.FacebookB.Location = new System.Drawing.Point(114, 59);
-            this.FacebookB.Name = "FacebookB";
-            this.FacebookB.Size = new System.Drawing.Size(40, 40);
-            this.FacebookB.TabIndex = 21;
-            this.FacebookB.UseVisualStyleBackColor = true;
-            this.FacebookB.Click += new System.EventHandler(this.FacebookB_Click);
-            // 
-            // ChromeB
-            // 
-            this.ChromeB.FlatAppearance.BorderSize = 0;
-            this.ChromeB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChromeB.Image = ((System.Drawing.Image)(resources.GetObject("ChromeB.Image")));
-            this.ChromeB.Location = new System.Drawing.Point(114, 209);
-            this.ChromeB.Name = "ChromeB";
-            this.ChromeB.Size = new System.Drawing.Size(40, 40);
-            this.ChromeB.TabIndex = 21;
-            this.ChromeB.UseVisualStyleBackColor = true;
             // 
             // BasilhsRole
             // 
@@ -222,7 +70,7 @@
             this.BasilhsRole.ForeColor = System.Drawing.Color.Black;
             this.BasilhsRole.Location = new System.Drawing.Point(195, 453);
             this.BasilhsRole.Name = "BasilhsRole";
-            this.BasilhsRole.Size = new System.Drawing.Size(169, 31);
+            this.BasilhsRole.Size = new System.Drawing.Size(109, 20);
             this.BasilhsRole.TabIndex = 5;
             this.BasilhsRole.Text = "@Api Research";
             // 
@@ -233,7 +81,7 @@
             this.BasilhsLabel.ForeColor = System.Drawing.SystemColors.GrayText;
             this.BasilhsLabel.Location = new System.Drawing.Point(167, 426);
             this.BasilhsLabel.Name = "BasilhsLabel";
-            this.BasilhsLabel.Size = new System.Drawing.Size(278, 38);
+            this.BasilhsLabel.Size = new System.Drawing.Size(183, 25);
             this.BasilhsLabel.TabIndex = 5;
             this.BasilhsLabel.Text = "Βασίλης Μοσχόπουλος";
             // 
@@ -244,7 +92,7 @@
             this.XrhstosRole.ForeColor = System.Drawing.Color.Black;
             this.XrhstosRole.Location = new System.Drawing.Point(117, 278);
             this.XrhstosRole.Name = "XrhstosRole";
-            this.XrhstosRole.Size = new System.Drawing.Size(431, 31);
+            this.XrhstosRole.Size = new System.Drawing.Size(280, 20);
             this.XrhstosRole.TabIndex = 5;
             this.XrhstosRole.Text = "@Software Engineering/Project manager";
             // 
@@ -255,7 +103,7 @@
             this.XrhstosLabel.ForeColor = System.Drawing.SystemColors.GrayText;
             this.XrhstosLabel.Location = new System.Drawing.Point(158, 251);
             this.XrhstosLabel.Name = "XrhstosLabel";
-            this.XrhstosLabel.Size = new System.Drawing.Size(292, 38);
+            this.XrhstosLabel.Size = new System.Drawing.Size(196, 25);
             this.XrhstosLabel.TabIndex = 5;
             this.XrhstosLabel.Text = "Χρήστος Καρδαμανίδης";
             // 
@@ -266,7 +114,7 @@
             this.SmaragdaRole.ForeColor = System.Drawing.Color.Black;
             this.SmaragdaRole.Location = new System.Drawing.Point(123, 366);
             this.SmaragdaRole.Name = "SmaragdaRole";
-            this.SmaragdaRole.Size = new System.Drawing.Size(413, 31);
+            this.SmaragdaRole.Size = new System.Drawing.Size(268, 20);
             this.SmaragdaRole.TabIndex = 5;
             this.SmaragdaRole.Text = "@Project Manager/ Database Designer";
             // 
@@ -277,7 +125,7 @@
             this.SmaragdaLabel.ForeColor = System.Drawing.SystemColors.GrayText;
             this.SmaragdaLabel.Location = new System.Drawing.Point(158, 339);
             this.SmaragdaLabel.Name = "SmaragdaLabel";
-            this.SmaragdaLabel.Size = new System.Drawing.Size(298, 38);
+            this.SmaragdaLabel.Size = new System.Drawing.Size(198, 25);
             this.SmaragdaLabel.TabIndex = 5;
             this.SmaragdaLabel.Text = "Σμαράγδα Πρασιανάκη";
             // 
@@ -288,7 +136,7 @@
             this.KyriakosRole.ForeColor = System.Drawing.Color.Black;
             this.KyriakosRole.Location = new System.Drawing.Point(158, 186);
             this.KyriakosRole.Name = "KyriakosRole";
-            this.KyriakosRole.Size = new System.Drawing.Size(282, 31);
+            this.KyriakosRole.Size = new System.Drawing.Size(182, 20);
             this.KyriakosRole.TabIndex = 5;
             this.KyriakosRole.Text = "@UI Designer/ Researcher";
             // 
@@ -299,7 +147,7 @@
             this.Team7Role.ForeColor = System.Drawing.Color.Black;
             this.Team7Role.Location = new System.Drawing.Point(138, 59);
             this.Team7Role.Name = "Team7Role";
-            this.Team7Role.Size = new System.Drawing.Size(333, 31);
+            this.Team7Role.Size = new System.Drawing.Size(219, 20);
             this.Team7Role.TabIndex = 5;
             this.Team7Role.Text = "@Deskop App Developer Team";
             // 
@@ -310,7 +158,7 @@
             this.KyriakosLabel.ForeColor = System.Drawing.SystemColors.GrayText;
             this.KyriakosLabel.Location = new System.Drawing.Point(170, 163);
             this.KyriakosLabel.Name = "KyriakosLabel";
-            this.KyriakosLabel.Size = new System.Drawing.Size(255, 38);
+            this.KyriakosLabel.Size = new System.Drawing.Size(173, 25);
             this.KyriakosLabel.TabIndex = 5;
             this.KyriakosLabel.Text = "Κυριάκος Ιωαννίδης";
             // 
@@ -321,7 +169,7 @@
             this.Team7Label.ForeColor = System.Drawing.SystemColors.GrayText;
             this.Team7Label.Location = new System.Drawing.Point(206, 32);
             this.Team7Label.Name = "Team7Label";
-            this.Team7Label.Size = new System.Drawing.Size(136, 46);
+            this.Team7Label.Size = new System.Drawing.Size(90, 30);
             this.Team7Label.TabIndex = 5;
             this.Team7Label.Text = "Team 7";
             // 
@@ -334,6 +182,7 @@
             this.BasilhsPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BasilhsPhoto.TabIndex = 3;
             this.BasilhsPhoto.TabStop = false;
+            this.BasilhsPhoto.Click += new System.EventHandler(this.BasilhsPhoto_Click);
             // 
             // SmaragdaPhoto
             // 
@@ -344,6 +193,7 @@
             this.SmaragdaPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.SmaragdaPhoto.TabIndex = 3;
             this.SmaragdaPhoto.TabStop = false;
+            this.SmaragdaPhoto.Click += new System.EventHandler(this.SmaragdaPhoto_Click);
             // 
             // XrhstosPhoto
             // 
@@ -354,6 +204,7 @@
             this.XrhstosPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.XrhstosPhoto.TabIndex = 3;
             this.XrhstosPhoto.TabStop = false;
+            this.XrhstosPhoto.Click += new System.EventHandler(this.XrhstosPhoto_Click);
             // 
             // KyriakosPhoto
             // 
@@ -364,6 +215,7 @@
             this.KyriakosPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.KyriakosPhoto.TabIndex = 3;
             this.KyriakosPhoto.TabStop = false;
+            this.KyriakosPhoto.Click += new System.EventHandler(this.KyriakosPhoto_Click);
             // 
             // label2
             // 
@@ -372,7 +224,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
             this.label2.Location = new System.Drawing.Point(3, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(317, 36);
+            this.label2.Size = new System.Drawing.Size(206, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "Τα μέλη της ομάδας : ";
             // 
@@ -383,7 +235,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
             this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(611, 36);
+            this.label1.Size = new System.Drawing.Size(403, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Η ομάδα που δημιούργησε την εφαρμογή :";
             // 
@@ -396,14 +248,15 @@
             this.TeamPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.TeamPhoto.TabIndex = 7;
             this.TeamPhoto.TabStop = false;
+            this.TeamPhoto.Click += new System.EventHandler(this.TeamPhoto_Click);
             // 
             // PanelSplitter
             // 
             this.PanelSplitter.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.PanelSplitter.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PanelSplitter.Location = new System.Drawing.Point(614, 0);
+            this.PanelSplitter.Location = new System.Drawing.Point(407, 0);
             this.PanelSplitter.Name = "PanelSplitter";
-            this.PanelSplitter.Size = new System.Drawing.Size(2, 497);
+            this.PanelSplitter.Size = new System.Drawing.Size(2, 517);
             this.PanelSplitter.TabIndex = 8;
             // 
             // InfoP
@@ -433,24 +286,70 @@
             this.InfoP.Size = new System.Drawing.Size(409, 517);
             this.InfoP.TabIndex = 9;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.memberXK1);
+            this.panel1.Controls.Add(this.memberSP1);
+            this.panel1.Controls.Add(this.memberBM1);
+            this.panel1.Controls.Add(this.memberKI1);
+            this.panel1.Controls.Add(this.team71);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(409, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(701, 517);
+            this.panel1.TabIndex = 10;
+            // 
+            // memberXK1
+            // 
+            this.memberXK1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.memberXK1.Location = new System.Drawing.Point(0, 0);
+            this.memberXK1.Name = "memberXK1";
+            this.memberXK1.Size = new System.Drawing.Size(701, 517);
+            this.memberXK1.TabIndex = 4;
+            // 
+            // memberSP1
+            // 
+            this.memberSP1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.memberSP1.Location = new System.Drawing.Point(0, 0);
+            this.memberSP1.Name = "memberSP1";
+            this.memberSP1.Size = new System.Drawing.Size(701, 517);
+            this.memberSP1.TabIndex = 3;
+            // 
+            // memberBM1
+            // 
+            this.memberBM1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.memberBM1.Location = new System.Drawing.Point(0, 0);
+            this.memberBM1.Name = "memberBM1";
+            this.memberBM1.Size = new System.Drawing.Size(701, 517);
+            this.memberBM1.TabIndex = 2;
+            // 
+            // memberKI1
+            // 
+            this.memberKI1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.memberKI1.Location = new System.Drawing.Point(0, 0);
+            this.memberKI1.Name = "memberKI1";
+            this.memberKI1.Size = new System.Drawing.Size(701, 517);
+            this.memberKI1.TabIndex = 1;
+            // 
+            // team71
+            // 
+            this.team71.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.team71.Location = new System.Drawing.Point(0, 0);
+            this.team71.Name = "team71";
+            this.team71.Size = new System.Drawing.Size(701, 517);
+            this.team71.TabIndex = 0;
+            // 
             // ContactUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.CausesValidation = false;
-            this.Controls.Add(this.Team7P);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.InfoP);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ContactUC";
             this.Size = new System.Drawing.Size(1110, 517);
-            this.Team7P.ResumeLayout(false);
-            this.Team7P.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BasilhsPhoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SmaragdaPhoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.XrhstosPhoto)).EndInit();
@@ -458,13 +357,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.TeamPhoto)).EndInit();
             this.InfoP.ResumeLayout(false);
             this.InfoP.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel Team7P;
         private System.Windows.Forms.Label BasilhsRole;
         private System.Windows.Forms.Label BasilhsLabel;
         private System.Windows.Forms.Label XrhstosRole;
@@ -483,18 +381,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox TeamPhoto;
         private System.Windows.Forms.Panel PanelSplitter;
-        private System.Windows.Forms.Button ChromeB;
         private System.Windows.Forms.Panel InfoP;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button TwitterB;
-        private System.Windows.Forms.Button FacebookB;
+        private System.Windows.Forms.Panel panel1;
+        private Team7 team71;
+        private MemberKI memberKI1;
+        private MemberXK memberXK1;
+        private MemberSP memberSP1;
+        private MemberBM memberBM1;
     }
 }

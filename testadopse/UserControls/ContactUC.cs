@@ -15,7 +15,7 @@ namespace testadopse.UserControls
         public ContactUC()
         {
             InitializeComponent();
-
+            team71.BringToFront();
 
         }
 
@@ -31,9 +31,36 @@ namespace testadopse.UserControls
 
         }
 
+        private void Team7P_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void KyriakosPhoto_Click(object sender, EventArgs e)
         {
-           
+            memberKI1.BringToFront();
+        }
+
+        private void TeamPhoto_Click(object sender, EventArgs e)
+        {
+            team71.BringToFront();
+        }
+
+     
+ 
+        private void XrhstosPhoto_Click(object sender, EventArgs e)
+        {
+            memberXK1.BringToFront();
+        }
+
+        private void SmaragdaPhoto_Click(object sender, EventArgs e)
+        {
+            memberSP1.BringToFront();
+        }
+
+        private void BasilhsPhoto_Click(object sender, EventArgs e)
+        {
+            memberBM1.BringToFront();
         }
     }
 }

@@ -33,12 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
-      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="Lucene.Net, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
-      <HintPath>..\packages\Lucene.Net.3.0.3\lib\NET40\Lucene.Net.dll</HintPath>
-    </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -62,21 +56,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="InformatiCS_LibraryDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>InformatiCS_LibraryDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Searcher.cs" />
     <Compile Include="UserControls\AboutUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,6 +76,18 @@
     <Compile Include="UserControls\ContactUC.Designer.cs">
       <DependentUpon>ContactUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Help.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HistoryUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\HistoryUC.Designer.cs">
+      <DependentUpon>HistoryUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\HomeUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -100,6 +99,37 @@
     </Compile>
     <Compile Include="UserControls\.Designer.cs">
       <DependentUpon>CategoriesUC.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberBM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberBM.Designer.cs">
+      <DependentUpon>MemberBM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MemberKI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberKI.Designer.cs">
+      <DependentUpon>MemberKI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MemberSP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberSP.Designer.cs">
+      <DependentUpon>MemberSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MemberXK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MemberXK.Designer.cs">
+      <DependentUpon>MemberXK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Team7.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Team7.Designer.cs">
+      <DependentUpon>Team7.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ViewLemma.cs">
       <SubType>UserControl</SubType>
@@ -131,11 +161,32 @@
     <EmbeddedResource Include="UserControls\ContactUC.resx">
       <DependentUpon>ContactUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\HistoryUC.resx">
+      <DependentUpon>HistoryUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\HomeUC.resx">
       <DependentUpon>HomeUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CategoriesUC.resx">
       <DependentUpon>CategoriesUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MemberBM.resx">
+      <DependentUpon>MemberBM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MemberKI.resx">
+      <DependentUpon>MemberKI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MemberSP.resx">
+      <DependentUpon>MemberSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MemberXK.resx">
+      <DependentUpon>MemberXK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Team7.resx">
+      <DependentUpon>Team7.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ViewLemma.resx">
       <DependentUpon>ViewLemma.cs</DependentUpon>
@@ -143,17 +194,6 @@
     <EmbeddedResource Include="UserControls\ViewUC.resx">
       <DependentUpon>ViewUC.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="InformatiCS_LibraryDataSet.xsc">
-      <DependentUpon>InformatiCS_LibraryDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="InformatiCS_LibraryDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>InformatiCS_LibraryDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="InformatiCS_LibraryDataSet.xss">
-      <DependentUpon>InformatiCS_LibraryDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
