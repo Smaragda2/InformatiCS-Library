@@ -43,10 +43,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(14, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 38);
+            this.label1.Size = new System.Drawing.Size(144, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Lemma Title";
             // 
@@ -55,11 +54,10 @@
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel1.Location = new System.Drawing.Point(0, 55);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(0, 36);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.panel1.Size = new System.Drawing.Size(1638, 2);
+            this.panel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.panel1.Size = new System.Drawing.Size(1092, 1);
             this.panel1.TabIndex = 1;
             // 
             // label2
@@ -67,10 +65,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(14, 5);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(9, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1900, 810);
+            this.label2.Size = new System.Drawing.Size(1239, 567);
             this.label2.TabIndex = 0;
             this.label2.Text = resources.GetString("label2.Text");
             // 
@@ -80,9 +77,8 @@
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1638, 57);
+            this.panel2.Size = new System.Drawing.Size(1092, 37);
             this.panel2.TabIndex = 3;
             // 
             // panel3
@@ -91,21 +87,19 @@
             this.panel3.AutoScrollMinSize = new System.Drawing.Size(3, 0);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 57);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Location = new System.Drawing.Point(0, 37);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1638, 717);
+            this.panel3.Size = new System.Drawing.Size(1092, 466);
             this.panel3.TabIndex = 4;
             // 
             // ViewLemma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ViewLemma";
-            this.Size = new System.Drawing.Size(1638, 774);
+            this.Size = new System.Drawing.Size(1092, 503);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);

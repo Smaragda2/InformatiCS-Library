@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace testadopse.UserControls
 {
-    public partial class AboutUC : UserControl
+    public partial class Team7 : UserControl
     {
-        public AboutUC()
+        public Team7()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

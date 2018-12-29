@@ -49,7 +49,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(553, 20);
             this.textBox1.TabIndex = 7;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // pictureBox1
             // 
@@ -92,7 +91,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(291, 465);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(751, 36);
+            this.label1.Size = new System.Drawing.Size(491, 23);
             this.label1.TabIndex = 11;
             this.label1.Text = "Alexander Technological Insitude, Electronic Encyclopedia\r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
