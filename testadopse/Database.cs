@@ -16,6 +16,7 @@ namespace testadopse
         private string article = null;
         private History_keep_LemmaTableAdapter history_Keep_LemmaTableAdapter = new History_keep_LemmaTableAdapter();
         private Lemma_MediaTableAdapter lemma_MediaTableAdapter = new Lemma_MediaTableAdapter();
+        private BookmarkTableAdapter bookmarkTableAdapter = new BookmarkTableAdapter();
 
         /// <summary>
         /// Parameters:
@@ -34,6 +35,7 @@ namespace testadopse
                 printDocument1.Print();
             }
         }
+
         /// <summary>
         /// Call this method in printDocument1_PrintPage event.
         /// <para>Paramaters is the same with the event method.</para>
@@ -94,6 +96,24 @@ namespace testadopse
                 imagesPath[i++] = row[0].ToString();
             }
             return imagesPath;
+        }
+
+        /// <summary>
+        /// Returns a string array.
+        /// <para>Each string format is: "BookmarkName,LemmaName"</para>
+        /// <para>~Example: my java Text,Java</para>
+        /// </summary>
+        public string[] GetAllBookmarks()
+        {
+            string[] bookmarks = null;
+            DataTable dataTable = bookmarkTableAdapter.GetAllBookmarks();
+            bookmarks = new string[dataTable.Rows.Count];
+            int i = 0;
+            foreach (DataRow row in dataTable.Rows)
+            {
+                bookmarks[i++] = row[1] + "," + row[3];
+            }
+            return bookmarks;
         }
     }
 }
