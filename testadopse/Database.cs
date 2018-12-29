@@ -103,9 +103,9 @@ namespace testadopse
         }
 
         /// <summary>
-        /// Returns a string array.
-        /// <para>Each string format is: "BookmarkName,LemmaName"</para>
-        /// <para>~Example: my java Text,Java</para>
+        /// Each string format is: "BookmarkName,LemmaName".
+        /// <para>Split each result by ',' delimiter, the first part is the Bookmark Name, </para>
+        /// <para>and the second part is the Lemma Name.</para>
         /// </summary>
         public string[] GetAllBookmarks()
         {
@@ -153,5 +153,7 @@ namespace testadopse
             }
             return lemmasTitles;
         }
+
+
     }
 }
