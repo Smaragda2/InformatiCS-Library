@@ -152,6 +152,12 @@
     <Compile Include="UserControls\Team7.Designer.cs">
       <DependentUpon>Team7.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Terms.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Terms.Designer.cs">
+      <DependentUpon>Terms.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ViewLemma.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Team7.resx">
       <DependentUpon>Team7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Terms.resx">
+      <DependentUpon>Terms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ViewLemma.resx">
       <DependentUpon>ViewLemma.cs</DependentUpon>
