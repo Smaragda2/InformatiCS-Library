@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\testadopse",
+    "\\testadopse\\UserControls"
   ],
+  "SelectedNode": "\\testadopse.sln",
   "PreviewInSolutionExplorer": false
 }
