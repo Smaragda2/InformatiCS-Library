@@ -87,3 +87,5 @@ C:\Users\Hp\Source\Repos\InformatiCS-Library\testadopse\obj\Debug\testadopse.csp
 C:\Users\Hp\Source\Repos\InformatiCS-Library\testadopse\obj\Debug\testadopse.csproj.CopyComplete
 C:\Users\Hp\Source\Repos\InformatiCS-Library\testadopse\obj\Debug\testadopse.exe
 C:\Users\Hp\Source\Repos\InformatiCS-Library\testadopse\obj\Debug\testadopse.pdb
+C:\Users\Hp\source\repos\InformatiCS-Library\testadopse\obj\Debug\testadopse.UserControls.Terms.resources
+C:\Users\Hp\source\repos\InformatiCS-Library\testadopse\bin\Debug\itextsharp.dll

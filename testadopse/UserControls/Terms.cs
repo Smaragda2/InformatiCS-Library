@@ -16,5 +16,15 @@ namespace testadopse.UserControls
         {
             InitializeComponent();
         }
+
+        private void htmlPanel1_Click(object sender, EventArgs e)
+        {
+            htmlPanel1.Text = "";
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
