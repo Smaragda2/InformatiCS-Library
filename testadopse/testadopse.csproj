@@ -121,6 +121,7 @@
     </Compile>
     <Compile Include="UserControls\.Designer.cs">
       <DependentUpon>CategoriesUC.cs</DependentUpon>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\MemberBM.cs">
       <SubType>UserControl</SubType>
