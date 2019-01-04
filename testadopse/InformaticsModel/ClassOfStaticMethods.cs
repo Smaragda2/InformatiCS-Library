@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using testadopse.InformatiCS_LibraryDataSetTableAdapters;
@@ -31,7 +32,7 @@ namespace InformaticsModel
                 cmd.Connection = myCon;
                 myCon.Open();
                 cmd.ExecuteNonQuery();
-                System.Windows.Forms.MessageBox.Show("An Item has been successfully added", "Caption", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                //System.Windows.Forms.MessageBox.Show("An Item has been successfully added", "Caption", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             }
 
 
