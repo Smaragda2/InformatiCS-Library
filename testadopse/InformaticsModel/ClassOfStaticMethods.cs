@@ -15,8 +15,27 @@ namespace InformaticsModel
         private History_keep_LemmaTableAdapter history_Keep_LemmaTableAdapter = new History_keep_LemmaTableAdapter();
         private BookmarkTableAdapter bookmarkTableAdapter = new BookmarkTableAdapter();
 
-        public static void addLemmaToHistory() { }
+        
+        public static void addLemmaToHistory(int historyID, int lemmaid)
+        {
+            using (OleDbConnection myCon = new OleDbConnection(Properties.Settings.Default.AdopseFINALConnectionString))
+            {
+                //String timestamp = "2009-04-21 16:25:53";
+                String timestamp = System.DateTime.Now.ToString();
+                OleDbCommand cmd = new OleDbCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "insert into History_keep_Lemma(HistoryID,LemmaID,HistoryTimestamp) values (@param1,@param2,@param3)";
+                cmd.Parameters.AddWithValue("@param1", historyID);
+                cmd.Parameters.AddWithValue("@param2", lemmaid);
+                cmd.Parameters.AddWithValue("@param3", timestamp);
+                cmd.Connection = myCon;
+                myCon.Open();
+                cmd.ExecuteNonQuery();
+                System.Windows.Forms.MessageBox.Show("An Item has been successfully added", "Caption", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            }
 
+
+        }
         /// <summary>
         /// Returns an array of string.
         /// <para>Split each result by ',' delimiter, the first part is the Lemma name,</para>
