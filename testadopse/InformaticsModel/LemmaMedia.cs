@@ -18,6 +18,11 @@ using Lucene.Net.Util;
 using LVersion = Lucene.Net.Util.Version;
 using Lucene.Net.QueryParsers;
 
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+
+using System.IO;
+
 
 
 
@@ -179,6 +184,88 @@ namespace InformaticsModel
         }
 
 
-        public void export() { }
+        public void navigate_where_to_export_pdf_text_only(String text)
+        {
+            //THIS METHOD NEEDS JUST THE TEXT AND IT WILL LEARN WHERE TO EXPORT IT
+            FolderBrowserDialog obj = new FolderBrowserDialog();
+            if (obj.ShowDialog() == DialogResult.OK)
+            {
+                String path = obj.SelectedPath;
+
+                MessageBox.Show(path);
+                //export(path ,text);
+                export(path, text);
+            }
+
+
+
+        }
+        public void navigate_where_to_export_pdf_text_and_image(String text, String url_to_photo)
+        {   //THIS METHOD NEEDS JUST THE TEXT AND THE SOURCE OF THE IMAGE AND IT WILL LEARN WHERE TO EXPORT THEM
+            FolderBrowserDialog obj = new FolderBrowserDialog();
+            if (obj.ShowDialog() == DialogResult.OK)
+            {
+                String path = obj.SelectedPath;
+
+                MessageBox.Show(path);
+
+                export_with_icons(path, text, url_to_photo);
+            }
+
+
+
+        }
+        private void export(String path, String text)
+        {   //KARDAMANIDIS CHRISTOS
+            //path is coming from filechooser,and text is what navigate_where gave us
+            iTextSharp.text.Document doc = new iTextSharp.text.Document();
+            String name_for_the_pdf = RandomString(8);
+            PdfWriter.GetInstance(doc, new FileStream(path + "\\" + name_for_the_pdf + ".pdf", FileMode.Create));
+
+            doc.Open();
+            Paragraph p1 = new Paragraph(text);
+
+            doc.Add(p1);
+
+
+
+        }
+
+        private void export_with_icons(String path, String text, String url_to_photo)
+        {   //KARDAMANIDIS CHRISTOS
+            iTextSharp.text.Image pic = iTextSharp.text.Image.GetInstance(url_to_photo);
+            iTextSharp.text.Document doc = new iTextSharp.text.Document();
+            String name_for_the_pdf = RandomString(8);
+            PdfWriter.GetInstance(doc, new FileStream(path + "\\" + name_for_the_pdf + ".pdf", FileMode.Create));
+            pic.ScaleAbsolute(120, 150);
+            doc.Open();
+            Paragraph p1 = new Paragraph(text);
+
+
+
+            doc.Add(p1);
+            doc.Add(pic);
+
+
+            doc.Close();
+
+
+        }
+        private void open_pdf(String source)
+        {   //KARDAMANIDIS CHRISTOS
+            //this methods needs the path of a file to view it with the default editor of windows
+            System.Diagnostics.Process.Start(source);
+
+
+        }
+
+
+        public static string RandomString(int length)
+        {   //KARDAMANIDIS CHRISTOS
+            Random random = new Random();
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+              .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
     }
 }
