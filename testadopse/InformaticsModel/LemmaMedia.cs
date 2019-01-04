@@ -22,9 +22,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 
 using System.IO;
-
-
-
+using System.Data.OleDb;
 
 namespace InformaticsModel
 {
@@ -42,7 +40,22 @@ namespace InformaticsModel
         private Lemma get_lemma() {
             throw new NotImplementedException();
         }
-        public void saveLemmaAsBookmark(String name) { }
+        public void add_to_bookmark(String bname, int lemmaName)
+        {
+            int lemmaid = limma.getLemmaIDbyLemmaName(lemmaName);
+            using (OleDbConnection myCon = new OleDbConnection(testadopse.Properties.Settings.Default.AdopseFINALConnectionString))
+            {
+                OleDbCommand cmd = new OleDbCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "insert into Bookmark (Bname,LemmaID) values (@param1,@param2)";
+                cmd.Parameters.AddWithValue("@param1", bname);
+                cmd.Parameters.AddWithValue("@param2", lemmaid);
+                cmd.Connection = myCon;
+                myCon.Open();
+                cmd.ExecuteNonQuery();
+                System.Windows.Forms.MessageBox.Show("An Item has been successfully added", "Caption", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            }
+        }
         public void showLemmaList() { }
 
         /// <summary>
