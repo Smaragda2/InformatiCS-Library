@@ -54,7 +54,7 @@ namespace InformaticsModel
         {
             string[] results = null;
             string indexDir = ".\\Index";
-            using (Directory dir = FSDirectory.Open(indexDir))
+            using (Lucene.Net.Store.Directory dir = FSDirectory.Open(indexDir))
             using (IndexSearcher searcher = new IndexSearcher(dir))
             {
                 // QueryParser parser = new QueryParser(LVersion.LUCENE_30, "Content", new StandardAnalyzer(LVersion.LUCENE_30));
@@ -119,7 +119,7 @@ namespace InformaticsModel
                 results = new string[hits.TotalHits];
                 foreach (ScoreDoc d in hits.ScoreDocs)
                 {
-                    Document doc = searcher.Doc(d.Doc);
+                    Lucene.Net.Documents.Document doc = searcher.Doc(d.Doc);
                     results[j++] = doc.Get("title").ToString();
                 }
             }
@@ -150,7 +150,7 @@ namespace InformaticsModel
         /// </summary>
         public void PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawString(article, new Font("Arial", 14, FontStyle.Bold), Brushes.Black, 150, 125);
+            e.Graphics.DrawString(article, new System.Drawing.Font("Arial", 14, FontStyle.Bold), Brushes.Black, 150, 125);
         }
 
         /// <summary>
@@ -196,9 +196,6 @@ namespace InformaticsModel
                 //export(path ,text);
                 export(path, text);
             }
-
-
-
         }
         public void navigate_where_to_export_pdf_text_and_image(String text, String url_to_photo)
         {   //THIS METHOD NEEDS JUST THE TEXT AND THE SOURCE OF THE IMAGE AND IT WILL LEARN WHERE TO EXPORT THEM
@@ -255,8 +252,6 @@ namespace InformaticsModel
         {   //KARDAMANIDIS CHRISTOS
             //this methods needs the path of a file to view it with the default editor of windows
             System.Diagnostics.Process.Start(source);
-
-
         }
 
 
