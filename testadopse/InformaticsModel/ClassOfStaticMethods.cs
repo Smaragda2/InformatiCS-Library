@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using testadopse.InformatiCS_LibraryDataSetTableAdapters;
 
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.Windows.Forms;
+using System.IO;
+
 
 namespace InformaticsModel
 {
