@@ -208,9 +208,6 @@ namespace InformaticsModel
 
                 export_with_icons(path, text, url_to_photo);
             }
-
-
-
         }
         private void export(String path, String text)
         {   //KARDAMANIDIS CHRISTOS
@@ -223,9 +220,6 @@ namespace InformaticsModel
             Paragraph p1 = new Paragraph(text);
 
             doc.Add(p1);
-
-
-
         }
 
         private void export_with_icons(String path, String text, String url_to_photo)
@@ -238,15 +232,10 @@ namespace InformaticsModel
             doc.Open();
             Paragraph p1 = new Paragraph(text);
 
-
-
             doc.Add(p1);
             doc.Add(pic);
 
-
             doc.Close();
-
-
         }
         private void open_pdf(String source)
         {   //KARDAMANIDIS CHRISTOS
