@@ -40,7 +40,7 @@ namespace InformaticsModel
         private Lemma get_lemma() {
             throw new NotImplementedException();
         }
-        public void add_to_bookmark(String bname, int lemmaName)
+        public void add_to_bookmark(String bname, string lemmaName)
         {
             int lemmaid = limma.getLemmaIDbyLemmaName(lemmaName);
             using (OleDbConnection myCon = new OleDbConnection(testadopse.Properties.Settings.Default.FinalConnectionString))
@@ -54,6 +54,7 @@ namespace InformaticsModel
                 myCon.Open();
                 cmd.ExecuteNonQuery();
                 System.Windows.Forms.MessageBox.Show("An Item has been successfully added", "Caption", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                myCon.Close();
             }
         }
         public void showLemmaList() { }
