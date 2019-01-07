@@ -37,11 +37,12 @@
             // htmlPanel1
             // 
             this.htmlPanel1.AutoScroll = true;
-            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(598, 92);
+            this.htmlPanel1.AutoScrollMinSize = new System.Drawing.Size(448, 36);
             this.htmlPanel1.BackColor = System.Drawing.SystemColors.Window;
-            this.htmlPanel1.Location = new System.Drawing.Point(408, 73);
+            this.htmlPanel1.Location = new System.Drawing.Point(306, 59);
+            this.htmlPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.htmlPanel1.Name = "htmlPanel1";
-            this.htmlPanel1.Size = new System.Drawing.Size(598, 131);
+            this.htmlPanel1.Size = new System.Drawing.Size(448, 106);
             this.htmlPanel1.TabIndex = 0;
             this.htmlPanel1.Text = resources.GetString("htmlPanel1.Text");
             this.htmlPanel1.Click += new System.EventHandler(this.htmlPanel1_Click);
@@ -49,23 +50,22 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::testadopse.Properties.Resources.Screenshot_21;
-            this.pictureBox1.Location = new System.Drawing.Point(408, 210);
+            this.pictureBox1.Location = new System.Drawing.Point(306, 171);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(418, 153);
+            this.pictureBox1.Size = new System.Drawing.Size(448, 124);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Terms
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.htmlPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Terms";
-            this.Size = new System.Drawing.Size(1456, 619);
+            this.Size = new System.Drawing.Size(1092, 503);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

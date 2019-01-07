@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using testadopse.InformatiCS_LibraryDataSetTableAdapters;
 
-namespace InformaticsModel
+namespace testadopse
 {
     class Lemma
     {

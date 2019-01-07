@@ -15,12 +15,6 @@ namespace testadopse.UserControls
         public ViewLemma()
         {
             InitializeComponent();
-            panel1.Width = this.Width - 6;
-        }
-
-        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-
         }
 
 
