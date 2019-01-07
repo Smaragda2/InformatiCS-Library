@@ -47,19 +47,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.TermsB = new System.Windows.Forms.Button();
             this.HistoryB = new System.Windows.Forms.Button();
             this.ContentP = new System.Windows.Forms.Panel();
-            this.help1 = new testadopse.UserControls.Help();
-            this.aboutUC1 = new testadopse.UserControls.AboutUC();
-            this.viewLemma1 = new testadopse.UserControls.ViewLemma();
-            this.contactUC1 = new testadopse.UserControls.ContactUC();
-            this.categoriesUC1 = new testadopse.UserControls.CategoriesUC();
-            this.viewUC1 = new testadopse.UserControls.ViewUC();
-            this.homeUC1 = new testadopse.UserControls.HomeUC();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.historyUC1 = new testadopse.UserControls.HistoryUC();
+            this.homepage1 = new testadopse.UserControls.Homepage();
             this.HeaderP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -274,7 +267,7 @@
             this.MenuP.Controls.Add(this.ContactB);
             this.MenuP.Controls.Add(this.AboutB);
             this.MenuP.Controls.Add(this.CategoriesB);
-            this.MenuP.Controls.Add(this.button2);
+            this.MenuP.Controls.Add(this.TermsB);
             this.MenuP.Controls.Add(this.HistoryB);
             this.MenuP.Controls.Add(this.HelpB);
             this.MenuP.Dock = System.Windows.Forms.DockStyle.Left;
@@ -310,23 +303,23 @@
             this.panel1.Size = new System.Drawing.Size(173, 1);
             this.panel1.TabIndex = 11;
             // 
-            // button2
+            // TermsB
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 302);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(169, 49);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "          Terms";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.ChangeColour);
+            this.TermsB.FlatAppearance.BorderSize = 0;
+            this.TermsB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TermsB.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.TermsB.ForeColor = System.Drawing.Color.White;
+            this.TermsB.Image = ((System.Drawing.Image)(resources.GetObject("TermsB.Image")));
+            this.TermsB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TermsB.Location = new System.Drawing.Point(0, 302);
+            this.TermsB.Margin = new System.Windows.Forms.Padding(4);
+            this.TermsB.Name = "TermsB";
+            this.TermsB.Size = new System.Drawing.Size(169, 49);
+            this.TermsB.TabIndex = 4;
+            this.TermsB.Text = "          Terms";
+            this.TermsB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TermsB.UseVisualStyleBackColor = true;
+            this.TermsB.Click += new System.EventHandler(this.TermsB_Click);
             // 
             // HistoryB
             // 
@@ -348,94 +341,13 @@
             // 
             // ContentP
             // 
-            this.ContentP.Controls.Add(this.historyUC1);
-            this.ContentP.Controls.Add(this.help1);
-            this.ContentP.Controls.Add(this.aboutUC1);
-            this.ContentP.Controls.Add(this.viewLemma1);
-            this.ContentP.Controls.Add(this.contactUC1);
-            this.ContentP.Controls.Add(this.categoriesUC1);
-            this.ContentP.Controls.Add(this.viewUC1);
-            this.ContentP.Controls.Add(this.homeUC1);
+            this.ContentP.Controls.Add(this.homepage1);
             this.ContentP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContentP.Location = new System.Drawing.Point(170, 39);
             this.ContentP.Name = "ContentP";
             this.ContentP.Size = new System.Drawing.Size(1110, 517);
             this.ContentP.TabIndex = 8;
             this.ContentP.Click += new System.EventHandler(this.ChangeColour);
-            // 
-            // help1
-            // 
-            this.help1.AutoScroll = true;
-            this.help1.BackColor = System.Drawing.Color.White;
-            this.help1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.help1.Location = new System.Drawing.Point(0, 0);
-            this.help1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.help1.Name = "help1";
-            this.help1.Size = new System.Drawing.Size(1110, 517);
-            this.help1.TabIndex = 6;
-            // 
-            // aboutUC1
-            // 
-            this.aboutUC1.AutoScroll = true;
-            this.aboutUC1.BackColor = System.Drawing.Color.White;
-            this.aboutUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aboutUC1.Location = new System.Drawing.Point(0, 0);
-            this.aboutUC1.Name = "aboutUC1";
-            this.aboutUC1.Size = new System.Drawing.Size(1110, 517);
-            this.aboutUC1.TabIndex = 5;
-            // 
-            // viewLemma1
-            // 
-            this.viewLemma1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewLemma1.Location = new System.Drawing.Point(0, 0);
-            this.viewLemma1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.viewLemma1.Name = "viewLemma1";
-            this.viewLemma1.Size = new System.Drawing.Size(1110, 517);
-            this.viewLemma1.TabIndex = 4;
-            // 
-            // contactUC1
-            // 
-            this.contactUC1.AutoSize = true;
-            this.contactUC1.BackColor = System.Drawing.Color.White;
-            this.contactUC1.CausesValidation = false;
-            this.contactUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contactUC1.ForeColor = System.Drawing.Color.Black;
-            this.contactUC1.Location = new System.Drawing.Point(0, 0);
-            this.contactUC1.Name = "contactUC1";
-            this.contactUC1.Size = new System.Drawing.Size(1110, 517);
-            this.contactUC1.TabIndex = 3;
-            // 
-            // categoriesUC1
-            // 
-            this.categoriesUC1.AutoSize = true;
-            this.categoriesUC1.BackColor = System.Drawing.Color.White;
-            this.categoriesUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.categoriesUC1.Location = new System.Drawing.Point(0, 0);
-            this.categoriesUC1.Name = "categoriesUC1";
-            this.categoriesUC1.Size = new System.Drawing.Size(1110, 517);
-            this.categoriesUC1.TabIndex = 2;
-            // 
-            // viewUC1
-            // 
-            this.viewUC1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.viewUC1.BackColor = System.Drawing.Color.White;
-            this.viewUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewUC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.viewUC1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.viewUC1.Location = new System.Drawing.Point(0, 0);
-            this.viewUC1.Name = "viewUC1";
-            this.viewUC1.Size = new System.Drawing.Size(1110, 517);
-            this.viewUC1.TabIndex = 1;
-            // 
-            // homeUC1
-            // 
-            this.homeUC1.AutoSize = true;
-            this.homeUC1.BackColor = System.Drawing.Color.White;
-            this.homeUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.homeUC1.Location = new System.Drawing.Point(0, 0);
-            this.homeUC1.Name = "homeUC1";
-            this.homeUC1.Size = new System.Drawing.Size(1110, 517);
-            this.homeUC1.TabIndex = 0;
             // 
             // timer
             // 
@@ -446,14 +358,14 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // historyUC1
+            // homepage1
             // 
-            this.historyUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.historyUC1.Location = new System.Drawing.Point(0, 0);
-            this.historyUC1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.historyUC1.Name = "historyUC1";
-            this.historyUC1.Size = new System.Drawing.Size(1110, 517);
-            this.historyUC1.TabIndex = 7;
+            this.homepage1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.homepage1.Location = new System.Drawing.Point(0, 0);
+            this.homepage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.homepage1.Name = "homepage1";
+            this.homepage1.Size = new System.Drawing.Size(1110, 517);
+            this.homepage1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -479,7 +391,6 @@
             this.MenuP.ResumeLayout(false);
             this.MenuP.PerformLayout();
             this.ContentP.ResumeLayout(false);
-            this.ContentP.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -499,22 +410,15 @@
         private System.Windows.Forms.Panel MenuP;
         private System.Windows.Forms.Button OptionsB;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel ContentP;
+        public System.Windows.Forms.Panel ContentP;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button TermsB;
         private System.Windows.Forms.Button HistoryB;
-        private UserControls.HomeUC homeUC1;
-        private UserControls.ViewUC viewUC1;
         private System.Windows.Forms.Label label2;
-        private UserControls.CategoriesUC categoriesUC1;
         private System.Windows.Forms.Timer timer;
-        private UserControls.ContactUC contactUC1;
         private System.Windows.Forms.Timer timer1;
-        private UserControls.ViewLemma viewLemma1;
-        private UserControls.AboutUC aboutUC1;
-        private UserControls.Help help1;
-        private UserControls.HistoryUC historyUC1;
+        private UserControls.Homepage homepage1;
     }
 }
 
