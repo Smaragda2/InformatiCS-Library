@@ -67,7 +67,7 @@ namespace InformaticsModel
         public string[] Search(string query)
         {
             string[] results = null;
-            string indexDir = ".\\Index";
+            string indexDir = "Index";
             using (Lucene.Net.Store.Directory dir = FSDirectory.Open(indexDir))
             using (IndexSearcher searcher = new IndexSearcher(dir))
             {

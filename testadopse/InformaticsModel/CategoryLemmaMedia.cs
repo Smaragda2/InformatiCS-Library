@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Lucene.Net.Index;
+using Lucene.Net.Search;
+using Lucene.Net.Store;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -24,14 +27,27 @@ namespace InformaticsModel
         public string[] SearchByCategory(string categoryName)
         {
             string[] results = null;
-            int i = 0;
-            Category_LemmaTableAdapter categoryLemmaTableAdapter = new Category_LemmaTableAdapter();
-            DataTable newTable = categoryLemmaTableAdapter.GetDataByCategoryName(categoryName);
-
-            results = new string[newTable.Rows.Count];
-            foreach (DataRow row in newTable.Rows)
+            string indexDir = "IndexCategory";
+            using (Lucene.Net.Store.Directory dir = FSDirectory.Open(indexDir))
+            using (IndexSearcher searcher = new IndexSearcher(dir))
             {
-                results[i++] = row[2].ToString();
+                Term term;
+                WildcardQuery q = null;
+                BooleanQuery bq = new BooleanQuery();
+
+                term = new Term("Cname", "*" + categoryName + "*");
+                q = new WildcardQuery(term);
+                bq.Add(q, Occur.MUST);
+
+                TopDocs hits = searcher.Search(bq,100);
+
+                int j = 0;
+                results = new string[hits.TotalHits];
+                foreach (ScoreDoc d in hits.ScoreDocs)
+                {
+                    Lucene.Net.Documents.Document doc = searcher.Doc(d.Doc);
+                    results[j++] = doc.Get("title").ToString();
+                }
             }
             return results;
         }
