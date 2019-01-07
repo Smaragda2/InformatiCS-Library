@@ -30,8 +30,6 @@ namespace testadopse {
         
         private Category_LemmaDataTable tableCategory_Lemma;
         
-        private HistoryDataTable tableHistory;
-        
         private History_keep_LemmaDataTable tableHistory_keep_Lemma;
         
         private LemmaDataTable tableLemma;
@@ -47,8 +45,6 @@ namespace testadopse {
         private global::System.Data.DataRelation relationCategoryCategory_Lemma_Media;
         
         private global::System.Data.DataRelation relationLemmaCategory_Lemma_Media;
-        
-        private global::System.Data.DataRelation relationHistoryHistory_keep_Lemma;
         
         private global::System.Data.DataRelation relationLemmaHistory_keep_Lemma;
         
@@ -92,9 +88,6 @@ namespace testadopse {
                 }
                 if ((ds.Tables["Category_Lemma"] != null)) {
                     base.Tables.Add(new Category_LemmaDataTable(ds.Tables["Category_Lemma"]));
-                }
-                if ((ds.Tables["History"] != null)) {
-                    base.Tables.Add(new HistoryDataTable(ds.Tables["History"]));
                 }
                 if ((ds.Tables["History_keep_Lemma"] != null)) {
                     base.Tables.Add(new History_keep_LemmaDataTable(ds.Tables["History_keep_Lemma"]));
@@ -156,16 +149,6 @@ namespace testadopse {
         public Category_LemmaDataTable Category_Lemma {
             get {
                 return this.tableCategory_Lemma;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public HistoryDataTable History {
-            get {
-                return this.tableHistory;
             }
         }
         
@@ -295,9 +278,6 @@ namespace testadopse {
                 if ((ds.Tables["Category_Lemma"] != null)) {
                     base.Tables.Add(new Category_LemmaDataTable(ds.Tables["Category_Lemma"]));
                 }
-                if ((ds.Tables["History"] != null)) {
-                    base.Tables.Add(new HistoryDataTable(ds.Tables["History"]));
-                }
                 if ((ds.Tables["History_keep_Lemma"] != null)) {
                     base.Tables.Add(new History_keep_LemmaDataTable(ds.Tables["History_keep_Lemma"]));
                 }
@@ -364,12 +344,6 @@ namespace testadopse {
                     this.tableCategory_Lemma.InitVars();
                 }
             }
-            this.tableHistory = ((HistoryDataTable)(base.Tables["History"]));
-            if ((initTable == true)) {
-                if ((this.tableHistory != null)) {
-                    this.tableHistory.InitVars();
-                }
-            }
             this.tableHistory_keep_Lemma = ((History_keep_LemmaDataTable)(base.Tables["History_keep_Lemma"]));
             if ((initTable == true)) {
                 if ((this.tableHistory_keep_Lemma != null)) {
@@ -403,7 +377,6 @@ namespace testadopse {
             this.relationLemmaBookmark = this.Relations["LemmaBookmark"];
             this.relationCategoryCategory_Lemma_Media = this.Relations["CategoryCategory_Lemma_Media"];
             this.relationLemmaCategory_Lemma_Media = this.Relations["LemmaCategory_Lemma_Media"];
-            this.relationHistoryHistory_keep_Lemma = this.Relations["HistoryHistory_keep_Lemma"];
             this.relationLemmaHistory_keep_Lemma = this.Relations["LemmaHistory_keep_Lemma"];
             this.relationLemmaLemma_Media = this.Relations["LemmaLemma_Media"];
             this.relationMediaLemma_Media = this.Relations["MediaLemma_Media"];
@@ -423,8 +396,6 @@ namespace testadopse {
             base.Tables.Add(this.tableCategory);
             this.tableCategory_Lemma = new Category_LemmaDataTable();
             base.Tables.Add(this.tableCategory_Lemma);
-            this.tableHistory = new HistoryDataTable();
-            base.Tables.Add(this.tableHistory);
             this.tableHistory_keep_Lemma = new History_keep_LemmaDataTable();
             base.Tables.Add(this.tableHistory_keep_Lemma);
             this.tableLemma = new LemmaDataTable();
@@ -447,10 +418,6 @@ namespace testadopse {
                         this.tableLemma.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableCategory_Lemma.LemmaIDColumn}, false);
             this.Relations.Add(this.relationLemmaCategory_Lemma_Media);
-            this.relationHistoryHistory_keep_Lemma = new global::System.Data.DataRelation("HistoryHistory_keep_Lemma", new global::System.Data.DataColumn[] {
-                        this.tableHistory.IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableHistory_keep_Lemma.HistoryIDColumn}, false);
-            this.Relations.Add(this.relationHistoryHistory_keep_Lemma);
             this.relationLemmaHistory_keep_Lemma = new global::System.Data.DataRelation("LemmaHistory_keep_Lemma", new global::System.Data.DataColumn[] {
                         this.tableLemma.IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableHistory_keep_Lemma.LemmaIDColumn}, false);
@@ -480,12 +447,6 @@ namespace testadopse {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeCategory_Lemma() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeHistory() {
             return false;
         }
         
@@ -582,9 +543,6 @@ namespace testadopse {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void Category_LemmaRowChangeEventHandler(object sender, Category_LemmaRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void HistoryRowChangeEventHandler(object sender, HistoryRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void History_keep_LemmaRowChangeEventHandler(object sender, History_keep_LemmaRowChangeEvent e);
@@ -1455,270 +1413,7 @@ namespace testadopse {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class HistoryDataTable : global::System.Data.TypedTableBase<HistoryRow> {
-            
-            private global::System.Data.DataColumn columnID;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public HistoryDataTable() {
-                this.TableName = "History";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal HistoryDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected HistoryDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
-                get {
-                    return this.columnID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public HistoryRow this[int index] {
-                get {
-                    return ((HistoryRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event HistoryRowChangeEventHandler HistoryRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event HistoryRowChangeEventHandler HistoryRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event HistoryRowChangeEventHandler HistoryRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event HistoryRowChangeEventHandler HistoryRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddHistoryRow(HistoryRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public HistoryRow AddHistoryRow() {
-                HistoryRow rowHistoryRow = ((HistoryRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null};
-                rowHistoryRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowHistoryRow);
-                return rowHistoryRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public HistoryRow FindByID(int ID) {
-                return ((HistoryRow)(this.Rows.Find(new object[] {
-                            ID})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                HistoryDataTable cln = ((HistoryDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new HistoryDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal void InitVars() {
-                this.columnID = base.Columns["ID"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID}, true));
-                this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = -1;
-                this.columnID.AutoIncrementStep = -1;
-                this.columnID.AllowDBNull = false;
-                this.columnID.Unique = true;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public HistoryRow NewHistoryRow() {
-                return ((HistoryRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new HistoryRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(HistoryRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.HistoryRowChanged != null)) {
-                    this.HistoryRowChanged(this, new HistoryRowChangeEvent(((HistoryRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.HistoryRowChanging != null)) {
-                    this.HistoryRowChanging(this, new HistoryRowChangeEvent(((HistoryRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.HistoryRowDeleted != null)) {
-                    this.HistoryRowDeleted(this, new HistoryRowChangeEvent(((HistoryRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.HistoryRowDeleting != null)) {
-                    this.HistoryRowDeleting(this, new HistoryRowChangeEvent(((HistoryRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveHistoryRow(HistoryRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                InformatiCS_LibraryDataSet ds = new InformatiCS_LibraryDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "HistoryDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class History_keep_LemmaDataTable : global::System.Data.TypedTableBase<History_keep_LemmaRow> {
-            
-            private global::System.Data.DataColumn columnHistoryID;
             
             private global::System.Data.DataColumn columnLemmaID;
             
@@ -1755,14 +1450,6 @@ namespace testadopse {
             protected History_keep_LemmaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn HistoryIDColumn {
-                get {
-                    return this.columnHistoryID;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1818,17 +1505,13 @@ namespace testadopse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public History_keep_LemmaRow AddHistory_keep_LemmaRow(HistoryRow parentHistoryRowByHistoryHistory_keep_Lemma, LemmaRow parentLemmaRowByLemmaHistory_keep_Lemma, System.DateTime HistoryTimestamp) {
+            public History_keep_LemmaRow AddHistory_keep_LemmaRow(LemmaRow parentLemmaRowByLemmaHistory_keep_Lemma, System.DateTime HistoryTimestamp) {
                 History_keep_LemmaRow rowHistory_keep_LemmaRow = ((History_keep_LemmaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        null,
                         HistoryTimestamp};
-                if ((parentHistoryRowByHistoryHistory_keep_Lemma != null)) {
-                    columnValuesArray[0] = parentHistoryRowByHistoryHistory_keep_Lemma[0];
-                }
                 if ((parentLemmaRowByLemmaHistory_keep_Lemma != null)) {
-                    columnValuesArray[1] = parentLemmaRowByLemmaHistory_keep_Lemma[0];
+                    columnValuesArray[0] = parentLemmaRowByLemmaHistory_keep_Lemma[0];
                 }
                 rowHistory_keep_LemmaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowHistory_keep_LemmaRow);
@@ -1837,9 +1520,8 @@ namespace testadopse {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public History_keep_LemmaRow FindByHistoryIDLemmaIDHistoryTimestamp(int HistoryID, int LemmaID, System.DateTime HistoryTimestamp) {
+            public History_keep_LemmaRow FindByLemmaIDHistoryTimestamp(int LemmaID, System.DateTime HistoryTimestamp) {
                 return ((History_keep_LemmaRow)(this.Rows.Find(new object[] {
-                            HistoryID,
                             LemmaID,
                             HistoryTimestamp})));
             }
@@ -1861,7 +1543,6 @@ namespace testadopse {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnHistoryID = base.Columns["HistoryID"];
                 this.columnLemmaID = base.Columns["LemmaID"];
                 this.columnHistoryTimestamp = base.Columns["HistoryTimestamp"];
             }
@@ -1869,17 +1550,13 @@ namespace testadopse {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnHistoryID = new global::System.Data.DataColumn("HistoryID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHistoryID);
                 this.columnLemmaID = new global::System.Data.DataColumn("LemmaID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLemmaID);
                 this.columnHistoryTimestamp = new global::System.Data.DataColumn("HistoryTimestamp", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHistoryTimestamp);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnHistoryID,
                                 this.columnLemmaID,
                                 this.columnHistoryTimestamp}, true));
-                this.columnHistoryID.AllowDBNull = false;
                 this.columnLemmaID.AllowDBNull = false;
                 this.columnHistoryTimestamp.AllowDBNull = false;
             }
@@ -3351,43 +3028,6 @@ namespace testadopse {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class HistoryRow : global::System.Data.DataRow {
-            
-            private HistoryDataTable tableHistory;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal HistoryRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableHistory = ((HistoryDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ID {
-                get {
-                    return ((int)(this[this.tableHistory.IDColumn]));
-                }
-                set {
-                    this[this.tableHistory.IDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public History_keep_LemmaRow[] GetHistory_keep_LemmaRows() {
-                if ((this.Table.ChildRelations["HistoryHistory_keep_Lemma"] == null)) {
-                    return new History_keep_LemmaRow[0];
-                }
-                else {
-                    return ((History_keep_LemmaRow[])(base.GetChildRows(this.Table.ChildRelations["HistoryHistory_keep_Lemma"])));
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class History_keep_LemmaRow : global::System.Data.DataRow {
             
             private History_keep_LemmaDataTable tableHistory_keep_Lemma;
@@ -3397,17 +3037,6 @@ namespace testadopse {
             internal History_keep_LemmaRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableHistory_keep_Lemma = ((History_keep_LemmaDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int HistoryID {
-                get {
-                    return ((int)(this[this.tableHistory_keep_Lemma.HistoryIDColumn]));
-                }
-                set {
-                    this[this.tableHistory_keep_Lemma.HistoryIDColumn] = value;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3429,17 +3058,6 @@ namespace testadopse {
                 }
                 set {
                     this[this.tableHistory_keep_Lemma.HistoryTimestampColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public HistoryRow HistoryRow {
-                get {
-                    return ((HistoryRow)(this.GetParentRow(this.Table.ParentRelations["HistoryHistory_keep_Lemma"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["HistoryHistory_keep_Lemma"]);
                 }
             }
             
@@ -3847,40 +3465,6 @@ namespace testadopse {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public Category_LemmaRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class HistoryRowChangeEvent : global::System.EventArgs {
-            
-            private HistoryRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public HistoryRowChangeEvent(HistoryRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public HistoryRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5114,281 +4698,6 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class HistoryTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
-        
-        private global::System.Data.OleDb.OleDbConnection _connection;
-        
-        private global::System.Data.OleDb.OleDbTransaction _transaction;
-        
-        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public HistoryTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.OleDb.OleDbConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.OleDb.OleDbTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "History";
-            tableMapping.ColumnMappings.Add("ID", "ID");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `History` WHERE ((`ID` = ?))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `History` DEFAULT VALUES";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `History` WHERE ((`ID` = ?))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::testadopse.Properties.Settings.Default.FinalConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
-            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID FROM History";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(InformatiCS_LibraryDataSet.HistoryDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual InformatiCS_LibraryDataSet.HistoryDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            InformatiCS_LibraryDataSet.HistoryDataTable dataTable = new InformatiCS_LibraryDataSet.HistoryDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(InformatiCS_LibraryDataSet.HistoryDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(InformatiCS_LibraryDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "History");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert() {
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Original_ID) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Original_ID));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class History_keep_LemmaTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.OleDb.OleDbDataAdapter _adapter;
@@ -5501,7 +4810,6 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "History_keep_Lemma";
-            tableMapping.ColumnMappings.Add("HistoryID", "HistoryID");
             tableMapping.ColumnMappings.Add("LemmaID", "LemmaID");
             tableMapping.ColumnMappings.Add("HistoryTimestamp", "HistoryTimestamp");
             this._adapter.TableMappings.Add(tableMapping);
@@ -5515,10 +4823,8 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_HistoryTimestamp", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "HistoryTimestamp", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `History_keep_Lemma` (`HistoryID`, `LemmaID`, `HistoryTimestamp`) VAL" +
-                "UES (?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `History_keep_Lemma` (`LemmaID`, `HistoryTimestamp`) VALUES (?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("HistoryID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "HistoryID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("LemmaID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "LemmaID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("HistoryTimestamp", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "HistoryTimestamp", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
@@ -5548,13 +4854,12 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[2];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT HistoryID, LemmaID, HistoryTimestamp FROM History_keep_Lemma";
+            this._commandCollection[0].CommandText = "SELECT LemmaID, HistoryTimestamp FROM History_keep_Lemma";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT hl.HistoryID, hl.LemmaID, l.Lname, hl.HistoryTimestamp\r\nFROM   ((History_k" +
-                "eep_Lemma hl INNER JOIN\r\n             Lemma l ON hl.LemmaID = l.ID) INNER JOIN\r\n" +
-                "             History h ON hl.HistoryID = h.ID)";
+            this._commandCollection[1].CommandText = "SELECT hl.LemmaID, l.Lname, hl.HistoryTimestamp\r\nFROM   (History_keep_Lemma hl IN" +
+                "NER JOIN\r\n             Lemma l ON hl.LemmaID = l.ID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5650,10 +4955,9 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int HistoryID, int LemmaID, System.DateTime HistoryTimestamp) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(HistoryID));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(LemmaID));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(HistoryTimestamp));
+        public virtual int Insert(int LemmaID, System.DateTime HistoryTimestamp) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(LemmaID));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(HistoryTimestamp));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5701,8 +5005,8 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Original_HistoryID, int Original_LemmaID, System.DateTime Original_HistoryTimestamp) {
-            return this.Update(Original_HistoryID, Original_LemmaID, Original_HistoryTimestamp, Original_HistoryID, Original_LemmaID, Original_HistoryTimestamp);
+        public virtual int Update(int HistoryID, int Original_HistoryID, int Original_LemmaID, System.DateTime Original_HistoryTimestamp) {
+            return this.Update(HistoryID, Original_LemmaID, Original_HistoryTimestamp, Original_HistoryID, Original_LemmaID, Original_HistoryTimestamp);
         }
     }
     
@@ -6938,8 +6242,6 @@ WHERE (l.Lname = ?) AND (m.data_type LIKE 'jpg' OR
         
         private Category_LemmaTableAdapter _category_LemmaTableAdapter;
         
-        private HistoryTableAdapter _historyTableAdapter;
-        
         private History_keep_LemmaTableAdapter _history_keep_LemmaTableAdapter;
         
         private LemmaTableAdapter _lemmaTableAdapter;
@@ -7002,20 +6304,6 @@ WHERE (l.Lname = ?) AND (m.data_type LIKE 'jpg' OR
             }
             set {
                 this._category_LemmaTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public HistoryTableAdapter HistoryTableAdapter {
-            get {
-                return this._historyTableAdapter;
-            }
-            set {
-                this._historyTableAdapter = value;
             }
         }
         
@@ -7106,10 +6394,6 @@ WHERE (l.Lname = ?) AND (m.data_type LIKE 'jpg' OR
                             && (this._category_LemmaTableAdapter.Connection != null))) {
                     return this._category_LemmaTableAdapter.Connection;
                 }
-                if (((this._historyTableAdapter != null) 
-                            && (this._historyTableAdapter.Connection != null))) {
-                    return this._historyTableAdapter.Connection;
-                }
                 if (((this._history_keep_LemmaTableAdapter != null) 
                             && (this._history_keep_LemmaTableAdapter.Connection != null))) {
                     return this._history_keep_LemmaTableAdapter.Connection;
@@ -7148,9 +6432,6 @@ WHERE (l.Lname = ?) AND (m.data_type LIKE 'jpg' OR
                 if ((this._category_LemmaTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._historyTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 if ((this._history_keep_LemmaTableAdapter != null)) {
                     count = (count + 1);
                 }
@@ -7180,15 +6461,6 @@ WHERE (l.Lname = ?) AND (m.data_type LIKE 'jpg' OR
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._categoryTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._historyTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.History.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._historyTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -7261,14 +6533,6 @@ WHERE (l.Lname = ?) AND (m.data_type LIKE 'jpg' OR
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._categoryTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._historyTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.History.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._historyTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -7378,14 +6642,6 @@ WHERE (l.Lname = ?) AND (m.data_type LIKE 'jpg' OR
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._historyTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.History.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._historyTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._categoryTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Category.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -7445,11 +6701,6 @@ WHERE (l.Lname = ?) AND (m.data_type LIKE 'jpg' OR
             }
             if (((this._category_LemmaTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._category_LemmaTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
-            if (((this._historyTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._historyTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -7530,15 +6781,6 @@ WHERE (l.Lname = ?) AND (m.data_type LIKE 'jpg' OR
                     if (this._category_LemmaTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._category_LemmaTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._category_LemmaTableAdapter.Adapter);
-                    }
-                }
-                if ((this._historyTableAdapter != null)) {
-                    revertConnections.Add(this._historyTableAdapter, this._historyTableAdapter.Connection);
-                    this._historyTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
-                    this._historyTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
-                    if (this._historyTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._historyTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._historyTableAdapter.Adapter);
                     }
                 }
                 if ((this._history_keep_LemmaTableAdapter != null)) {
@@ -7646,10 +6888,6 @@ WHERE (l.Lname = ?) AND (m.data_type LIKE 'jpg' OR
                 if ((this._category_LemmaTableAdapter != null)) {
                     this._category_LemmaTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._category_LemmaTableAdapter]));
                     this._category_LemmaTableAdapter.Transaction = null;
-                }
-                if ((this._historyTableAdapter != null)) {
-                    this._historyTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._historyTableAdapter]));
-                    this._historyTableAdapter.Transaction = null;
                 }
                 if ((this._history_keep_LemmaTableAdapter != null)) {
                     this._history_keep_LemmaTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._history_keep_LemmaTableAdapter]));
