@@ -57,7 +57,7 @@ namespace InformaticsModel
 
             foreach (DataRow row in newTable.Rows)
             {
-                rowData = row[2].ToString() + "," + row[3].ToString();
+                rowData = row[1].ToString() + "," + row[2].ToString();
                 results[i++] = rowData;
                 Console.WriteLine(i - 1 + " = " + rowData);
             }
