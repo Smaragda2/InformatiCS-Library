@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InformaticsModel;
 
 namespace testadopse.UserControls
 {
     public partial class ViewUC : UserControl
     {
-        static testadopse.LemmaMedia lm = new LemmaMedia();
+        static LemmaMedia lm = new LemmaMedia();
         static testadopse.ClassOfStaticMethods cm = new ClassOfStaticMethods();
         public Label[] labels;
         static int x;

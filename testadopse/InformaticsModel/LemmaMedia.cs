@@ -7,7 +7,7 @@ using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using testadopse.InformatiCS_LibraryDataSetTableAdapters;
+using testadopse.InformatiCS_LibraryDataSet1TableAdapters;
 using Lucene.Net.Documents;
 using Lucene.Net.Search;
 using Lucene.Net;
@@ -23,8 +23,9 @@ using iTextSharp.text.pdf;
 
 using System.IO;
 using System.Data.OleDb;
+using testadopse;
 
-namespace testadopse
+namespace InformaticsModel
 {
     class LemmaMedia
     {
@@ -67,7 +68,7 @@ namespace testadopse
         public string[] Search(string query)
         {
             string[] results = null;
-            string indexDir = ".\\Index";
+            string indexDir = "Index";
             using (Lucene.Net.Store.Directory dir = FSDirectory.Open(indexDir))
             using (IndexSearcher searcher = new IndexSearcher(dir))
             {
@@ -190,9 +191,11 @@ namespace testadopse
             i = 0;
             DataTable dataTable = lemma_MediaTableAdapter.GetImagePathsByLemmaName(lemmaName);
             imagesPath = new string[dataTable.Rows.Count];
+            string s = null;
             foreach (DataRow row in dataTable.Rows)
             {
-                imagesPath[i++] = row[0].ToString();
+                s = row[3].ToString() + row[4].ToString();
+                imagesPath[i++] = s;
             }
             return imagesPath;
         }
@@ -234,7 +237,6 @@ namespace testadopse
             Paragraph p1 = new Paragraph(text);
 
             doc.Add(p1);
-            doc.Close();
         }
 
         private void export_with_icons(String path, String text, String url_to_photo)

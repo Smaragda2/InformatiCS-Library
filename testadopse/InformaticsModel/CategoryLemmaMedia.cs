@@ -1,4 +1,5 @@
-﻿using Lucene.Net.Index;
+﻿using InformaticsModel;
+using Lucene.Net.Index;
 using Lucene.Net.Search;
 using Lucene.Net.Store;
 using System;
@@ -6,7 +7,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
-using testadopse.InformatiCS_LibraryDataSetTableAdapters;
+using testadopse.InformatiCS_LibraryDataSet1TableAdapters;
 
 
 namespace testadopse

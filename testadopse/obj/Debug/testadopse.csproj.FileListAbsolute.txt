@@ -122,3 +122,4 @@ C:\Users\smara\Source\Repos\InformatiCS-Library3\testadopse\obj\Debug\testadopse
 C:\Users\smara\Source\Repos\InformatiCS-Library3\testadopse\obj\Debug\testadopse.csproj.CopyComplete
 C:\Users\smara\Source\Repos\InformatiCS-Library3\testadopse\obj\Debug\testadopse.exe
 C:\Users\smara\Source\Repos\InformatiCS-Library3\testadopse\obj\Debug\testadopse.pdb
+C:\Users\smara\Source\Repos\InformatiCS-Library3\testadopse\obj\Debug\testadopse.UserControls.Homepage.resources

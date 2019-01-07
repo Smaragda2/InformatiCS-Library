@@ -77,9 +77,6 @@
     <Compile Include="InformaticsModel\Lemma.cs" />
     <Compile Include="InformaticsModel\LemmaMedia.cs" />
     <Compile Include="InformaticsModel\Media.cs" />
-    <Compile Include="InformatiCS_LibraryDataSet.cs">
-      <DependentUpon>InformatiCS_LibraryDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="InformatiCS_LibraryDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -110,6 +107,12 @@
     </Compile>
     <Compile Include="UserControls\HistoryUC.Designer.cs">
       <DependentUpon>HistoryUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\HomePage.designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\HomeUC.cs">
       <SubType>UserControl</SubType>
@@ -196,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\HistoryUC.resx">
       <DependentUpon>HistoryUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\HomeUC.resx">
       <DependentUpon>HomeUC.cs</DependentUpon>

@@ -5,7 +5,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Linq;
 using System.Text;
-using testadopse.InformatiCS_LibraryDataSetTableAdapters;
+using testadopse.InformatiCS_LibraryDataSet1TableAdapters;
 
 using iTextSharp.text;
 using iTextSharp.text.pdf;
