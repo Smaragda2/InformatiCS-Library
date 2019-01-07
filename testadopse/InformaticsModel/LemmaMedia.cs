@@ -190,9 +190,11 @@ namespace InformaticsModel
             i = 0;
             DataTable dataTable = lemma_MediaTableAdapter.GetImagePathsByLemmaName(lemmaName);
             imagesPath = new string[dataTable.Rows.Count];
+            string s = null;
             foreach (DataRow row in dataTable.Rows)
             {
-                imagesPath[i++] = row[0].ToString();
+                s = row[3].ToString() + row[4].ToString();
+                imagesPath[i++] = s;
             }
             return imagesPath;
         }

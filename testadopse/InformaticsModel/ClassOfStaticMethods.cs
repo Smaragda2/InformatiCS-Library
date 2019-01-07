@@ -40,8 +40,6 @@ namespace InformaticsModel
                 myCon.Close();
                 //System.Windows.Forms.MessageBox.Show("An Item has been successfully added", "Caption", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             }
-
-
         }
         /// <summary>
         /// Returns an array of string.

@@ -6221,7 +6221,7 @@ namespace testadopse.InformatiCS_LibraryDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT  lm.*,m.Contect
+            this._commandCollection[1].CommandText = @"SELECT lm.LemmaID, lm.MediaID, m.Contect, m.data_type
 FROM   ((Lemma_Media lm INNER JOIN
              Media m ON lm.MediaID = m.ID) INNER JOIN
              Lemma l ON lm.LemmaID = l.ID)
