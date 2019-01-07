@@ -13,7 +13,7 @@ using System.Windows.Forms;
 using System.IO;
 
 
-namespace InformaticsModel
+namespace testadopse
 {
     class ClassOfStaticMethods
     {
@@ -22,7 +22,7 @@ namespace InformaticsModel
         private BookmarkTableAdapter bookmarkTableAdapter = new BookmarkTableAdapter();
 
         
-        public static void addLemmaToHistory(int lemmaid)
+        public void addLemmaToHistory(int lemmaid)
         {
             using (OleDbConnection myCon = new OleDbConnection(testadopse.Properties.Settings.Default.FinalConnectionString))
             {
@@ -40,12 +40,15 @@ namespace InformaticsModel
                 myCon.Close();
                 //System.Windows.Forms.MessageBox.Show("An Item has been successfully added", "Caption", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             }
+
+
         }
         /// <summary>
         /// Returns an array of string.
         /// <para>Split each result by ',' delimiter, the first part is the Lemma name,</para>
         /// <para>and the second part is the timestamp of the history.</para>
         /// </summary>
+        /// 
         public string[] getAllHistory()
         {
 
@@ -57,12 +60,13 @@ namespace InformaticsModel
 
             foreach (DataRow row in newTable.Rows)
             {
-                rowData = row[1].ToString() + "," + row[2].ToString();
+                rowData = row[2].ToString() + "," + row[3].ToString();
                 results[i++] = rowData;
                 Console.WriteLine(i - 1 + " = " + rowData);
             }
             return results;
         }
+
 
         public static Collection<Object> ShowHistory() { throw new NotImplementedException(); }
 

@@ -9,7 +9,7 @@ using System.Text;
 using testadopse.InformatiCS_LibraryDataSetTableAdapters;
 
 
-namespace InformaticsModel
+namespace testadopse
 {
     class CategoryLemmaMedia
     {
@@ -39,7 +39,7 @@ namespace InformaticsModel
                 q = new WildcardQuery(term);
                 bq.Add(q, Occur.MUST);
 
-                TopDocs hits = searcher.Search(bq,100);
+                TopDocs hits = searcher.Search(bq, 100);
 
                 int j = 0;
                 results = new string[hits.TotalHits];
