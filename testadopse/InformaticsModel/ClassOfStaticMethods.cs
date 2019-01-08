@@ -87,5 +87,79 @@ namespace testadopse
             }
             return bookmarks;
         }
+        /*
+        Deletes all  records of bookmarks table
+        Created by Kardamanidis Christos
+        This method gets the id of the lemma as a parameter and it deletes it   this history record 
+
+            */
+        public void delete_all_bookmarks()
+        {
+            using (OleDbConnection myCon = new OleDbConnection(Properties.Settings.Default.FinalConnectionString))
+            {
+                OleDbCommand cmd = new OleDbCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "DELETE FROM Bookmark";
+
+                cmd.Connection = myCon;
+                myCon.Open();
+                cmd.ExecuteNonQuery();
+                //System.Windows.Forms.MessageBox.Show("An Item has been successfully added", "Caption", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                myCon.Close();
+
+            }
+
+
+
+
+        }
+        /*
+         Deletes a single record of history_keep_lemma
+         Created by Kardamanidis Christos
+         This method gets the id of the lemma  and the timestamp of visiting it as a parameter and it deletes it   this history record 
+             
+             */
+        public void delete_history_keep_lemma_record(int lemma_id, String history_timestamp)
+        {
+            using (OleDbConnection myCon = new OleDbConnection(Properties.Settings.Default.FinalConnectionString))
+            {
+                OleDbCommand cmd = new OleDbCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "DELETE FROM History_keep_Lemma WHERE LemmaID LIKE @param1 AND  HistoryTimestamp LIKE @param2";
+                cmd.Parameters.AddWithValue("@param1", lemma_id);
+                cmd.Parameters.AddWithValue("@param2", history_timestamp);
+
+                cmd.Connection = myCon;
+                myCon.Open();
+                cmd.ExecuteNonQuery();
+                myCon.Close();
+            }
+
+
+        }
+        /*
+         Deletes a single line of bookmark
+         Created by Kardamanidis Christos
+         This method gets bookmark name as a parameter and it deletes it    
+             
+             */
+        public void delete_bookmark(String bname)
+        {
+            using (OleDbConnection myCon = new OleDbConnection(Properties.Settings.Default.FinalConnectionString))
+            {
+                OleDbCommand cmd = new OleDbCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "DELETE FROM Bookmark WHERE bname LIKE @param1";
+                cmd.Parameters.AddWithValue("@param1", bname);
+
+                cmd.Connection = myCon;
+                myCon.Open();
+                cmd.ExecuteNonQuery();
+                myCon.Close();
+            }
+
+
+        }
+
     }
 }

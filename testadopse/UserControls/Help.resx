@@ -121,13 +121,13 @@
   <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
-        fQAAAX0BYP1ugwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFLSURBVEhL3ZRB
-        SgNBEEVnqYgLY/Q2Ea8QEMFTCAFFlBgJSBbqSRTEhZdwobjwEIIiMbpwY/vK/j0MxLYnQ2/0wYPw+1cl
-        mZmk+J8451ZxgDf4KO11H1dUawYLtvANY0xwU/XZYHADP20LnGMHl+QaXqBhna7G6sFAG8c2DduKp+Cs
-        5yvuBVuK01Aefo/xyRVFoXPpq26gKA3lez/jOoqi0Fn3VXerKA1lu3nGgqIodBZ91b0qSkO5yRtMFKWh
-        3OQS3SlKQznc5CtFUehc+6obKkpDufqY9hRPwdmOr7hnbCuuBwM//dDmcB6rPzRjX2OzwWAX7dPFeEL7
-        nwrsabQ+DLXwEO0P7h0/8AGPcVmdKs2+zW+wdOR3l/R1lA+W7vrdJSc6ygdLw1MVONVRPlh65HeXHOgo
-        Hyy1hyIwVpwXFtvlskf8TNGfpyi+ADHvGhjj3am5AAAAAElFTkSuQmCC
+        fAAAAXwBsrqMZwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFFSURBVEhL3ZRB
+        SgNBEEWzVMSFiXqbiFcISMBTBAKKKHEkIFmYnCQBySKXyCIhixxCUCRGF24cX0G1NIOTmpqstOHTw9T/
+        9btqqqdS+ZcrTdNjkIApeFLIcwccbVU0Cc7BO8hbawLNUiYIz8CXZh6y18GB4oR9pDHhNFwmCA7BShO0
+        8sTE28p5Za8WNoHcDSe3RPAelZtY3J84goWK6pYI3qlyZxY3NpCPJ2vPEsHZV+6bxd3WYO0xKNOiuccg
+        fOSxJaI9E21R1+LGLYrHtL1hTC80+YuMdmEDISL47aLt8H4XxBdNPK5dyQMZYQPI6fLWM4EkCl65jRBX
+        wS2QH9wH+ARLcA9qWm18gHLVbDoZ2XuZEjvuSiwBBpcZkwdL445jEKYqePXdSSwBme8yldxYGndchyL4
+        rNwJigi0XTLigyL8v8H5BjHvGhjMY9/nAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -250,5 +250,8 @@
         zTqACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK
         KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//9k=
 </value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Η εγκυκλοπαίδεια InformatiCS-Library έχει καθαρά εκπαιδευτικό χαρακτήρα και έχει ως σκοπό να αποτελέσει εργαλείο υποβοήθησης διδασκαλίας για φοιτητές πληροφορικής αλλά και για μαθητές και σπουδαστές με ανάλογη επαφή στον τομέα της πληροφορικής.</value>
   </data>
 </root>
