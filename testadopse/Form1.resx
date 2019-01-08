@@ -229,19 +229,19 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="TermsB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
-        fQAAAX0BYP1ugwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAH2SURBVEhLzZVN
-        S1RhGIbHECK0hVH5sWoRYpvah1A/IEnaSSvBfxD0sZE2tYwWQctqWS1bRZR/wEWgJraplStFLIo+fbru
-        59wz0LxnnFFbdMGF59zP/b5nHD3nNP4LIuIQTuEbfI2XlHm8f9hkCG/gB2xHmWZDrvcOi8bwLm5gk2Wc
-        sysKjDp3cNTLO0NpEl/gbxS/8BlOutJCmWfqCK3R2qLbImsV3/ExnvWoI3TO4ROvSTwq8Vx0/3XbYI2+
-        1sRRieedCzVQP+rD7us97/kCVE/hR7zn8ySHdXje0wWojeJqLoh4hwPV4R4vwOlhH7Yga998xHmSpTqY
-        fa4qMeDza/gWT2QBOB7Bus0HM4n4lsU6GL6vOnEaj6BuLrGEJ7F2c8HxeKYR645KGOpZIy77fBibd61+
-        alPx1+aC8ys5iVhwVMLwVtWJR46U6Xm0mGmFjovnD5luNnHdUQnDiaoT23jcsXJ9NfrUxScXZPr6PqEY
-        d1wPhVdVL+47SjjXRYrNBfkDLYCXjjpD6Qz+xB3Mv8Vu0Jl29wdOON4dirdRbOF5xwXM9ERVR8w77g7l
-        PnyeyyK+4KxHLcj0XviqAjzFPo96gwX9+FCrjV6VF/AiNv+dhb7/fi/bOyy+ipvaqQ29yWZcOxhsdAxv
-        ou70Ndzfu/jf02j8AaEbHJ4vi1WTAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAAX0AAAF9AWD9boMAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAAB9klEQVRIS82VTUtUYRiGxxAitIVR+bFqEWKb2odQPyBJ2kkrwX8Q9LGRNrWMFkHLalktW0WUf8BF
+        oCa2qZUrRSyKPn267ufcM9C8Z5xRW3TBhefcz/2+Zxw95zT+CyLiEE7hG3yNl5R5vH/YZAhv4AdsR5lm
+        Q673DovG8C5uYJNlnLMrCow6d3DUyztDaRJf4G8Uv/AZTrrSQpln6git0dqi2yJrFd/xMZ71qCN0zuET
+        r0k8KvFcdP9122CNvtbEUYnnnQs1UD/qw+7rPe/5AlRP4Ue85/Mkh3V43tMFqI3iai6IeIcD1eEeL8Dp
+        YR+2IGvffMR5kqU6mH2uKjHg82v4Fk9kATgewbrNBzOJ+JbFOhi+rzpxGo+gbi6xhCexdnPB8XimEeuO
+        ShjqWSMu+3wYm3etfmpT8dfmgvMrOYlYcFTC8FbViUeOlOl5tJhphY6L5w+ZbjZx3VEJw4mqE9t43LFy
+        fTX61MUnF2T6+j6hGHdcD4VXVS/uO0o410WKzQX5Ay2Al446Q+kM/sQdzL/FbtCZdvcHTjjeHYq3UWzh
+        eccFzPREVUfMO+4O5T58nssivuCsRy3I9F74qgI8xT6PeoMF/fhQq41elRfwIjb/nYW+/34v2zssvoqb
+        2qkNvclmXDsYbHQMb6Lu9DXc37v439No/AGhGxyeL4tVkwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="HistoryB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
