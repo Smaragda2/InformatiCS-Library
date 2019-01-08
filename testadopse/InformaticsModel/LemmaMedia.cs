@@ -43,7 +43,7 @@ namespace InformaticsModel
         }
         public void add_to_bookmark(String bname, string lemmaName)
         {
-            int lemmaid = limma.getLemmaIDbyLemmaName(lemmaName);
+            int lemmaid = new Lemma().getLemmaIDbyLemmaName(lemmaName);
             using (OleDbConnection myCon = new OleDbConnection(testadopse.Properties.Settings.Default.FinalConnectionString))
             {
                 OleDbCommand cmd = new OleDbCommand();
@@ -237,6 +237,7 @@ namespace InformaticsModel
             Paragraph p1 = new Paragraph(text);
 
             doc.Add(p1);
+            doc.Close();
         }
 
         private void export_with_icons(String path, String text, String url_to_photo)
