@@ -14,6 +14,7 @@ namespace testadopse.UserControls
     {
 
         bool hide,hide2;
+        testadopse.ClassOfStaticMethods cosm = new ClassOfStaticMethods();
 
         public HomeUC()
         {
@@ -23,7 +24,7 @@ namespace testadopse.UserControls
             BookMarkP.Visible = false;
             hide = true;
             hide2 = true;
-           
+
         }
 
         private void AdvSearchB_Click(object sender, EventArgs e)
@@ -46,7 +47,32 @@ namespace testadopse.UserControls
             textBox1.ForeColor = Color.Black;
         }
 
+        private void HomeUC_Load(object sender, EventArgs e)
+        {
 
+            string[] pinakas = cosm.GetAllBookmarks();
+            gemismabookmark(pinakas);
+        }
+
+        public void gemismabookmark(string[] pinakas)
+        {
+            
+            Bookmarks.Controls.Clear();
+            for (int i=0; i<pinakas.Length; i++)
+            {
+                Button btn = new Button();
+                btn.Text = pinakas[i];
+                btn.Dock = DockStyle.Top;
+                btn.AutoSize = true;
+                Bookmarks.Controls.Add(btn);
+            }
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
 
         private void BookMarkB_Click(object sender, EventArgs e)
         {

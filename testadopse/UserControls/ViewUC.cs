@@ -18,6 +18,8 @@ namespace testadopse.UserControls
         public Label[] labels;
         static int x;
         string lemmatext;
+        string lemmaname;
+
         public ViewUC()
         {
             InitializeComponent();
@@ -135,6 +137,7 @@ namespace testadopse.UserControls
             panel2.Controls.Add(vl);
             vl.Dock = DockStyle.Fill;
             vl.lemman.Text = lbl.Text;
+            setlemmaname(lbl.Text);
             vl.lemmat.Text = lm.GetLemmaContent(lbl.Text);
             setlemmatext(vl.lemmat.Text);
 
@@ -142,6 +145,16 @@ namespace testadopse.UserControls
             addhistory(lmid, lbl);
 
 
+        }
+
+        public void setlemmaname(string lname)
+        {
+            lemmaname = lname;
+        }
+
+        public string getlemmaname()
+        {
+            return lemmaname;
         }
 
         public void setlemmatext(string ltext)
@@ -154,14 +167,11 @@ namespace testadopse.UserControls
             return lemmatext;
         }
 
-        public void addhistory(object lemma, object lemmaname)
+        public void addhistory(object lemma, object lemmaname2)
         {
             Lemma lmid = lemma as Lemma;
-            Label lbl = lemmaname as Label;
-           // cm.addLemmaToHistory(lmid.getLemmaIDbyLemmaName(lbl.Text));
-
-            cm.addLemmaToHistory(5);
-
+            Label lbl = lemmaname2 as Label;
+            cm.addLemmaToHistory(lmid.getLemmaIDbyLemmaName(lbl.Text));
         }
 
         public object getclassOfStaticMethods()
@@ -184,12 +194,24 @@ namespace testadopse.UserControls
         private void exportB_Click(object sender, EventArgs e)
         {
             if (lemmatext != null) lm.navigate_where_to_export_pdf_text_only(lemmatext);
-            else MessageBox.Show("Δεν εχετε επιλεξει λημμα");
+            else MessageBox.Show("Δεν έχετε επιλέξει λήμμα");
         }
 
         private void bookmarkB_Click(object sender, EventArgs e)
         {
+            Lemma lmid = sender as Lemma;
+            if (lemmatext != null) lm.add_to_bookmark(lemmaname, lemmaname); 
+            else MessageBox.Show("Δεν έχετε επιλέξει λήμμα");
 
+           // lm.add_to_bookmark(lemmaname,lemmaname);
+        }
+
+        private void enter_click(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SearchB_Click(this, new EventArgs());
+            }
         }
 
         private void PrintB_Click(object sender, EventArgs e)

@@ -14,10 +14,14 @@ namespace testadopse.UserControls
     {
 
         public Label[] labels;
+        static string hdate;
+        static int help1 = 0;
+        testadopse.ClassOfStaticMethods cosm = new ClassOfStaticMethods();
 
         public HistoryUC()
         {
             InitializeComponent();
+           
 
         }
 
@@ -29,27 +33,188 @@ namespace testadopse.UserControls
 
         private void HistoryUC_Load(object sender, EventArgs e)
         {
-            panel2.Controls.Clear();
-            testadopse.UserControls.ViewUC vc = new ViewUC();
-
-            testadopse.ClassOfStaticMethods cosm = vc.getclassOfStaticMethods() as ClassOfStaticMethods;
+            // testadopse.UserControls.ViewUC vc = new ViewUC();
+            // testadopse.ClassOfStaticMethods cosm = vc.getclassOfStaticMethods() as ClassOfStaticMethods;
+            
             string[] pinakas = cosm.getAllHistory();
             gemismahistory(pinakas);
         }
 
-        public void gemismahistory(string[] pinakas)
+    
+    //
+    //          Methodos morfopoihshs toy History 
+    //
+
+    public void gemismahistory(string[] pinakas)
         {
             labels = new Label[pinakas.Length];
-            for (int i=0; i<pinakas.Length; i++)
+            pinakas = revertpinaka(pinakas);
+            for (int i = 0; i < pinakas.Length; i++)
             {
                 labels[i] = new Label();
+                Label historydate = new Label();
+                Label historyday = new Label();
+                Label historymonth = new Label();
+                Label historyyear = new Label();
+                Label historytime = new Label();
+                Label historyhelp = new Label();
+                Label historylemma = new Label();
+                CheckBox cb = new CheckBox();
                 labels[i].Text = pinakas[i].ToString();
-                labels[i].ForeColor = System.Drawing.Color.FromArgb(128, 128, 255);
-                labels[i].Font = new Font("Century Gothic", 15, FontStyle.Bold);
-                labels[i].Location = new Point(60, i * 80);
-                panel2.Controls.Add(labels[i]);
+
+                
+                string[] data2 = labels[i].Text.Split('/');
+                historyday.Text = data2[0];
+                historymonth.Text = data2[1];
+                historymonth.Text = setmhnas(historymonth.Text);
+                historyyear.Text = Between2(labels[i].Text,"/" , " ");
+                historydate.Text = historyday.Text + " & " + historymonth.Text + " & " + historyyear.Text;         
+                string[] data = labels[i].Text.Split(' ');
+                historytime.Text = data[1];
+                historytime.Text = Between(labels[i].Text, " " , ",");
+
+                var result = labels[i].Text.Substring(labels[i].Text.LastIndexOf(',') + 1);
+                historylemma.Text = result.ToString();
+
+
+                if (historyday.Text != hdate)
+                {
+                    historydate.ForeColor = System.Drawing.Color.FromArgb(128, 128, 255);
+                    historydate.Font = new Font("Century Gothic", 20, FontStyle.Underline );
+                    historydate.AutoSize = true;
+                    if (help1 == 0) { historydate.Location = new Point(320, help1 + 10); help1 += 20; }
+                    else { historydate.Location = new Point(320, help1 + 50); help1 += 70; }
+                    panel2.Controls.Add(historydate);
+                    
+                }
+
+                historytime.ForeColor = System.Drawing.Color.Black;
+                historytime.Font = new Font("Century Gothic", 12);
+                historytime.AutoSize = true;
+                historytime.Location = new Point(220, help1 + 50);
+                panel2.Controls.Add(historytime);
+
+                historylemma.ForeColor = System.Drawing.Color.Green;
+                historylemma.Font = new Font("Century Gothic", 12);
+                historylemma.AutoSize = true;
+                historylemma.Location = new Point(350, help1 + 50);
+                panel2.Controls.Add(historylemma);
+
+                cb.Location = new Point(150, help1 + 50);
+                panel2.Controls.Add(cb);
+
+                hdate = historyday.Text;
+                help1 += 40;
                 panel2.Refresh();
             }
         }
+
+    
+        //
+        //    Antistrofh toy pinaka gia na emfanizetai to istoriko apo neotero se palaiotero
+        //
+
+        public string[] revertpinaka(string[] pinaka)
+        {
+            string[] pinakas2 = new string[pinaka.Length];
+            int x = pinaka.Length;
+            for (int i = 0; i < pinakas2.Length; i++)
+            {
+                pinakas2[i] = pinaka[x - i - 1];
+
+            }
+            return pinakas2;
+        }
+
+        public string setmhnas(string str)
+        {
+            string mhnas = str;
+            switch (str)
+            {
+                case "1":
+                    mhnas = "Ιανουαρίου";
+                    break;
+                case "2":
+                    mhnas = "Φεβρουαρίου";
+                    break;
+                case "3":
+                    mhnas = "Μαρτίου";
+                    break;
+                case "4":
+                    mhnas = "Απριλίου";
+                    break;
+                case "5":
+                    mhnas = "Μαίου";
+                    break;
+                case "6":
+                    mhnas = "Ιουνίου";
+                    break;
+                case "7":
+                    mhnas = "Ιουλίου";
+                    break;
+                case "8":
+                    mhnas = "Αυγούστου";
+                    break;
+                case "9":
+                    mhnas = "Σεπτεμβρίου";
+                    break;
+                case "10":
+                    mhnas = "Οκτωβρίου";
+                    break;
+                case "11":
+                    mhnas = "Νοεβρίου";
+                    break;
+                case "12":
+                    mhnas = "Δεκεμβρίου";
+                    break;
+            }
+
+            return mhnas;
+        
+        }
+
+        public static string Between(string value, string a, string b)
+        {
+            int posA = value.IndexOf(a, +1);
+            int posB = value.IndexOf(b);
+            if (posA == -1)
+            {
+                return "";
+            }
+            if (posB == -1)
+            {
+                return "";
+            }
+            int adjustedPosA = posA + a.Length;
+            if (adjustedPosA >= posB)
+            {
+                return "";
+            }
+            return value.Substring(adjustedPosA, posB - adjustedPosA);
+        }
+
+        public static string Between2(string value, string a, string b)
+        {
+            int posA = value.LastIndexOf(a);
+            int posB = value.IndexOf(b);
+            if (posA == -1)
+            {
+                return "";
+            }
+            if (posB == -1)
+            {
+                return "";
+            }
+            int adjustedPosA = posA + a.Length;
+            if (adjustedPosA >= posB)
+            {
+                return "";
+            }
+            return value.Substring(adjustedPosA, posB - adjustedPosA);
+        }
+
+
+
+
     }
 }

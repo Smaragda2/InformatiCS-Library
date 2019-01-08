@@ -30,10 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeUC));
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BookMarkP = new System.Windows.Forms.Panel();
+            this.Bookmarks = new System.Windows.Forms.Panel();
+            this.BookmarkOptions = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.LineP = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SearchB = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.AdvSearchB = new System.Windows.Forms.Button();
+            this.BookMarkB = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,17 +51,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.BookMarkB = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.BookMarkP = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.BookMarkP.SuspendLayout();
+            this.BookmarkOptions.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,19 +79,70 @@
             this.textBox1.Text = "Κάντε αναζήτηση λήμματος ";
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             // 
-            // pictureBox1
+            // BookMarkP
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(474, 4);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(200, 200);
-            this.pictureBox1.MinimumSize = new System.Drawing.Size(180, 180);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 180);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.BookMarkP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BookMarkP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BookMarkP.Controls.Add(this.Bookmarks);
+            this.BookMarkP.Controls.Add(this.BookmarkOptions);
+            this.BookMarkP.Location = new System.Drawing.Point(1192, 3);
+            this.BookMarkP.Name = "BookMarkP";
+            this.BookMarkP.Size = new System.Drawing.Size(137, 181);
+            this.BookMarkP.TabIndex = 15;
+            // 
+            // Bookmarks
+            // 
+            this.Bookmarks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Bookmarks.Location = new System.Drawing.Point(0, 60);
+            this.Bookmarks.Name = "Bookmarks";
+            this.Bookmarks.Size = new System.Drawing.Size(135, 119);
+            this.Bookmarks.TabIndex = 16;
+            // 
+            // BookmarkOptions
+            // 
+            this.BookmarkOptions.Controls.Add(this.button2);
+            this.BookmarkOptions.Controls.Add(this.LineP);
+            this.BookmarkOptions.Controls.Add(this.button1);
+            this.BookmarkOptions.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BookmarkOptions.Location = new System.Drawing.Point(0, 0);
+            this.BookmarkOptions.Name = "BookmarkOptions";
+            this.BookmarkOptions.Size = new System.Drawing.Size(135, 60);
+            this.BookmarkOptions.TabIndex = 16;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(0, 30);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(135, 30);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Delete  1 Bookmark";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // LineP
+            // 
+            this.LineP.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.LineP.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.LineP.Location = new System.Drawing.Point(0, 59);
+            this.LineP.Name = "LineP";
+            this.LineP.Size = new System.Drawing.Size(135, 1);
+            this.LineP.TabIndex = 16;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(135, 30);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Delete Bookmarks";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // SearchB
             // 
@@ -103,19 +155,6 @@
             this.SearchB.Size = new System.Drawing.Size(117, 27);
             this.SearchB.TabIndex = 10;
             this.SearchB.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe Script", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(420, 612);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(491, 23);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Alexander Technological Insitude, Electronic Encyclopedia\r\n";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AdvSearchB
             // 
@@ -131,6 +170,19 @@
             this.AdvSearchB.Text = "Adv Search";
             this.AdvSearchB.UseVisualStyleBackColor = false;
             this.AdvSearchB.Click += new System.EventHandler(this.AdvSearchB_Click);
+            // 
+            // BookMarkB
+            // 
+            this.BookMarkB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BookMarkB.FlatAppearance.BorderSize = 0;
+            this.BookMarkB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BookMarkB.Image = ((System.Drawing.Image)(resources.GetObject("BookMarkB.Image")));
+            this.BookMarkB.Location = new System.Drawing.Point(1331, 4);
+            this.BookMarkB.Name = "BookMarkB";
+            this.BookMarkB.Size = new System.Drawing.Size(53, 51);
+            this.BookMarkB.TabIndex = 14;
+            this.BookMarkB.UseVisualStyleBackColor = true;
+            this.BookMarkB.Click += new System.EventHandler(this.BookMarkB_Click);
             // 
             // panel1
             // 
@@ -344,97 +396,32 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Τύπος Αναζήτησης";
             // 
-            // BookMarkB
+            // label1
             // 
-            this.BookMarkB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BookMarkB.FlatAppearance.BorderSize = 0;
-            this.BookMarkB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BookMarkB.Image = ((System.Drawing.Image)(resources.GetObject("BookMarkB.Image")));
-            this.BookMarkB.Location = new System.Drawing.Point(1331, 4);
-            this.BookMarkB.Name = "BookMarkB";
-            this.BookMarkB.Size = new System.Drawing.Size(53, 51);
-            this.BookMarkB.TabIndex = 14;
-            this.BookMarkB.UseVisualStyleBackColor = true;
-            this.BookMarkB.Click += new System.EventHandler(this.BookMarkB_Click);
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe Script", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(420, 612);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(491, 23);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Alexander Technological Insitude, Electronic Encyclopedia\r\n";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel3
+            // pictureBox1
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 36);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(135, 1);
-            this.panel3.TabIndex = 1;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(0, 73);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(135, 36);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Bookmark page 2";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // BookMarkP
-            // 
-            this.BookMarkP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BookMarkP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BookMarkP.Controls.Add(this.button4);
-            this.BookMarkP.Controls.Add(this.button3);
-            this.BookMarkP.Controls.Add(this.button2);
-            this.BookMarkP.Controls.Add(this.panel3);
-            this.BookMarkP.Controls.Add(this.button1);
-            this.BookMarkP.Location = new System.Drawing.Point(1192, 3);
-            this.BookMarkP.Name = "BookMarkP";
-            this.BookMarkP.Size = new System.Drawing.Size(137, 149);
-            this.BookMarkP.TabIndex = 15;
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(0, 109);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(135, 36);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Bookmark page 3";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(0, 37);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 36);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Bookmark page 1";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 36);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Open Bookmarks";
-            this.button1.UseVisualStyleBackColor = true;
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(474, 4);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(200, 200);
+            this.pictureBox1.MinimumSize = new System.Drawing.Size(180, 180);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 180);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -451,6 +438,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1387, 658);
             this.panel2.TabIndex = 16;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // HomeUC
             // 
@@ -461,10 +449,12 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.Name = "HomeUC";
             this.Size = new System.Drawing.Size(1387, 658);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.HomeUC_Load);
+            this.BookMarkP.ResumeLayout(false);
+            this.BookmarkOptions.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.BookMarkP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -474,10 +464,13 @@
         #endregion
 
         public System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Panel BookMarkP;
+        private System.Windows.Forms.Panel Bookmarks;
+        public System.Windows.Forms.Panel BookmarkOptions;
+        private System.Windows.Forms.Panel LineP;
         public System.Windows.Forms.Button SearchB;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button AdvSearchB;
+        private System.Windows.Forms.Button BookMarkB;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -488,15 +481,12 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button BookMarkB;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel BookMarkP;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
     }
 }
