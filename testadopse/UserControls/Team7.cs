@@ -16,5 +16,11 @@ namespace testadopse.UserControls
         {
             InitializeComponent();
         }
+
+        private void FacebookB_Click(object sender, EventArgs e)
+        {
+            string targetURL = @"https://www.facebook.com/groups/1444335492397620/?ref=bookmarks";
+            System.Diagnostics.Process.Start(targetURL);
+        }
     }
 }

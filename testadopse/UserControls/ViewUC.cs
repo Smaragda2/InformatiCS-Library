@@ -30,11 +30,19 @@ namespace testadopse.UserControls
 
         }
 
+        //
+        //   Methodos gia na pairnei to text apo thn arxikh othoni kai na einai idio otan anoigei
+        //
+
         public void textboxtext(string text)
         {
             if (text == "" || text == "Κάντε αναζήτηση λήμματος ") textBox1.Text = " Δεν εχετει εισάγει τίποτα ";
             else textBox1.Text = text;
         }
+
+        //
+        //  Methodos gia na kanei search analoga me to ti yparxei sto textbox
+        //
 
         public string[] search()
         {
@@ -51,6 +59,11 @@ namespace testadopse.UserControls
             string[] pinakas = lm.Search(textBox1.Text);
             gemismalabel(pinakas);
         }
+
+
+        //
+        // Methodos gia dhmiourgia label kai morfopoihsh tous, apo ton pinaka pou epestrepse to search()
+        //
 
         public Label[] gemismalabel(string[] pinakas)
         {
@@ -85,6 +98,11 @@ namespace testadopse.UserControls
             return labels;
         }
 
+        //
+        //  Methodos gia na kanei searchimage() analoga me to lemmaname
+        //***************************************************************
+        // ****(DEN EXEI TESTARISTEI GIATI DEN YPARXAN EIKONES)****
+        //***************************************************************
 
         public void SearchImages(string[] pinakas)
         {
@@ -95,6 +113,13 @@ namespace testadopse.UserControls
             }
 
         }
+
+        //
+        //  Methodos gia na dhmioyrgei 
+        //***************************************************************
+        // ****(DEN EXEI TESTARISTEI GIATI DEN YPARXAN EIKONES)****
+        //***************************************************************
+
         public void gemismaimages(string[] pinakas)
         {
             PictureBox pictureBox = new PictureBox();
@@ -114,6 +139,9 @@ namespace testadopse.UserControls
 
         }
 
+        //
+        //  EVENT : Otan patietai to buttonsearch na kanei anazhthsh me bash toy textbox
+        //
         private void SearchB_Click(object sender, EventArgs e)
         {
             string[] pinakas = search();
@@ -121,10 +149,18 @@ namespace testadopse.UserControls
             SearchImages(pinakas);
         }
 
+        //
+        // EVENT : Otan klikarei panw sto textbox na sbhnetai to keimeno
+        //
+
         private void textBox1_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
         }
+
+        //
+        // EVENT: Otan ginetai klik se ena lemmaname na emfanizei to lemma kai to periexomeno tou
+        //
 
         public void label_Click(object sender, EventArgs e)
         {
@@ -142,7 +178,8 @@ namespace testadopse.UserControls
             setlemmatext(vl.lemmat.Text);
 
 
-            addhistory(lmid, lbl);
+            addhistory(lmid, lbl); // Epidh exei epilegei na anoiksei to label klisei tis methodou addhistory
+                                   // des pio katw gia thn methodo . 
 
 
         }
@@ -167,6 +204,10 @@ namespace testadopse.UserControls
             return lemmatext;
         }
 
+        //
+        //  Methodos pou eisagei to klikarismeno label sto istoriko .
+        //
+
         public void addhistory(object lemma, object lemmaname2)
         {
             Lemma lmid = lemma as Lemma;
@@ -179,11 +220,19 @@ namespace testadopse.UserControls
             return cm;
         }
 
+        //
+        // EVENT : Otan o korsoras dhxnei to lemma na upogramizetai
+        //
+
         private void OnMouseEnter(object sender, EventArgs e)
         {
             Label label1 = sender as Label;
             label1.Font = new Font(label1.Font.Name, label1.Font.SizeInPoints, FontStyle.Underline | FontStyle.Bold );         
         }
+
+        //
+        //  EVENT: Otan feugei o korsora to lemma na ginetai kanoniko
+        //
 
         private void OnMouseLeave(object sender, EventArgs e)
         {
@@ -191,20 +240,45 @@ namespace testadopse.UserControls
             label1.Font = new Font(label1.Font.Name, label1.Font.SizeInPoints, FontStyle.Bold);
         }
 
+        //
+        // EVENT: Otan patietai to koumpi export kai exei epilexthei ena lemma, kanei EXPORT to lema 
+        //
+
         private void exportB_Click(object sender, EventArgs e)
         {
             if (lemmatext != null) lm.navigate_where_to_export_pdf_text_only(lemmatext);
             else MessageBox.Show("Δεν έχετε επιλέξει λήμμα");
         }
 
+        //
+        // EVENT: Otan patietai to koumpi bookmark kai exei epilexthei ena lemma, apothikeuei to lemma sto BOOKMARK
+        //
+
         private void bookmarkB_Click(object sender, EventArgs e)
         {
             Lemma lmid = sender as Lemma;
             if (lemmatext != null) lm.add_to_bookmark(lemmaname, lemmaname); 
+            else MessageBox.Show("Δεν έχετε επιλέξει λήμμα");       
+        }
+
+        //
+        // EVENT: Otan patietai to koumpi print kai exei epilexthei ena lemma, ektupwnei to lemma
+        //
+
+        private void PrintB_Click(object sender, EventArgs e)
+        {
+            LemmaMedia lm = new LemmaMedia();
+            Label lname = new Label();
+            Label ltext = new Label();
+
+            if (lemmatext != null) lm.Print(printDialog1, printDocument1, lname, ltext);
             else MessageBox.Show("Δεν έχετε επιλέξει λήμμα");
 
-           // lm.add_to_bookmark(lemmaname,lemmaname);
         }
+
+        //
+        // EVENT: Otan patietai to koumpi ENTER mesa sto textbox, na ginetai anazhthsh me to bash to textbox
+        //
 
         private void enter_click(object sender, KeyEventArgs e)
         {
@@ -214,9 +288,6 @@ namespace testadopse.UserControls
             }
         }
 
-        private void PrintB_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

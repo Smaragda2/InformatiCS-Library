@@ -177,6 +177,7 @@
             this.FacebookB.Size = new System.Drawing.Size(40, 40);
             this.FacebookB.TabIndex = 21;
             this.FacebookB.UseVisualStyleBackColor = true;
+            this.FacebookB.Click += new System.EventHandler(this.FacebookB_Click);
             // 
             // ChromeB
             // 

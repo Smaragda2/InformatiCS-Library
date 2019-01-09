@@ -33,9 +33,9 @@
             this.BookMarkP = new System.Windows.Forms.Panel();
             this.Bookmarks = new System.Windows.Forms.Panel();
             this.BookmarkOptions = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Delete1Bookmark = new System.Windows.Forms.Button();
             this.LineP = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.DeleteBookmarks = new System.Windows.Forms.Button();
             this.SearchB = new System.Windows.Forms.Button();
             this.AdvSearchB = new System.Windows.Forms.Button();
             this.BookMarkB = new System.Windows.Forms.Button();
@@ -85,64 +85,69 @@
             this.BookMarkP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BookMarkP.Controls.Add(this.Bookmarks);
             this.BookMarkP.Controls.Add(this.BookmarkOptions);
-            this.BookMarkP.Location = new System.Drawing.Point(1192, 3);
+            this.BookMarkP.Location = new System.Drawing.Point(1111, 3);
             this.BookMarkP.Name = "BookMarkP";
-            this.BookMarkP.Size = new System.Drawing.Size(137, 181);
+            this.BookMarkP.Size = new System.Drawing.Size(220, 200);
             this.BookMarkP.TabIndex = 15;
             // 
             // Bookmarks
             // 
             this.Bookmarks.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Bookmarks.Location = new System.Drawing.Point(0, 60);
+            this.Bookmarks.Location = new System.Drawing.Point(0, 62);
             this.Bookmarks.Name = "Bookmarks";
-            this.Bookmarks.Size = new System.Drawing.Size(135, 119);
+            this.Bookmarks.Size = new System.Drawing.Size(218, 136);
             this.Bookmarks.TabIndex = 16;
             // 
             // BookmarkOptions
             // 
-            this.BookmarkOptions.Controls.Add(this.button2);
+            this.BookmarkOptions.Controls.Add(this.Delete1Bookmark);
             this.BookmarkOptions.Controls.Add(this.LineP);
-            this.BookmarkOptions.Controls.Add(this.button1);
+            this.BookmarkOptions.Controls.Add(this.DeleteBookmarks);
             this.BookmarkOptions.Dock = System.Windows.Forms.DockStyle.Top;
             this.BookmarkOptions.Location = new System.Drawing.Point(0, 0);
             this.BookmarkOptions.Name = "BookmarkOptions";
-            this.BookmarkOptions.Size = new System.Drawing.Size(135, 60);
+            this.BookmarkOptions.Size = new System.Drawing.Size(218, 62);
             this.BookmarkOptions.TabIndex = 16;
+            this.BookmarkOptions.Paint += new System.Windows.Forms.PaintEventHandler(this.BookmarkOptions_Paint);
             // 
-            // button2
+            // Delete1Bookmark
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(0, 30);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 30);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Delete  1 Bookmark";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Delete1Bookmark.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Delete1Bookmark.FlatAppearance.BorderSize = 0;
+            this.Delete1Bookmark.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete1Bookmark.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.Delete1Bookmark.ForeColor = System.Drawing.Color.Black;
+            this.Delete1Bookmark.Location = new System.Drawing.Point(0, 30);
+            this.Delete1Bookmark.Name = "Delete1Bookmark";
+            this.Delete1Bookmark.Size = new System.Drawing.Size(218, 30);
+            this.Delete1Bookmark.TabIndex = 17;
+            this.Delete1Bookmark.Text = "Delete a Bookmark";
+            this.Delete1Bookmark.UseVisualStyleBackColor = true;
+            this.Delete1Bookmark.Click += new System.EventHandler(this.Delete1Bookmark_Click);
             // 
             // LineP
             // 
-            this.LineP.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.LineP.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.LineP.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.LineP.Location = new System.Drawing.Point(0, 59);
+            this.LineP.Location = new System.Drawing.Point(0, 61);
             this.LineP.Name = "LineP";
-            this.LineP.Size = new System.Drawing.Size(135, 1);
+            this.LineP.Size = new System.Drawing.Size(218, 1);
             this.LineP.TabIndex = 16;
             // 
-            // button1
+            // DeleteBookmarks
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 30);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Delete Bookmarks";
-            this.button1.UseVisualStyleBackColor = true;
+            this.DeleteBookmarks.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DeleteBookmarks.FlatAppearance.BorderSize = 0;
+            this.DeleteBookmarks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteBookmarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.DeleteBookmarks.ForeColor = System.Drawing.Color.Black;
+            this.DeleteBookmarks.Location = new System.Drawing.Point(0, 0);
+            this.DeleteBookmarks.Name = "DeleteBookmarks";
+            this.DeleteBookmarks.Size = new System.Drawing.Size(218, 30);
+            this.DeleteBookmarks.TabIndex = 16;
+            this.DeleteBookmarks.Text = "Delete Bookmarks";
+            this.DeleteBookmarks.UseVisualStyleBackColor = true;
+            this.DeleteBookmarks.Click += new System.EventHandler(this.DeleteBookmarks_Click);
             // 
             // SearchB
             // 
@@ -486,7 +491,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Delete1Bookmark;
+        private System.Windows.Forms.Button DeleteBookmarks;
     }
 }

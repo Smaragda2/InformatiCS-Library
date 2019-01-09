@@ -16,7 +16,10 @@ namespace testadopse.UserControls
         public Label[] labels;
         static string hdate;
         static int help1 = 0;
+        static int megethos;
         testadopse.ClassOfStaticMethods cosm = new ClassOfStaticMethods();
+
+        string[] deletehistory;
 
         public HistoryUC()
         {
@@ -38,6 +41,7 @@ namespace testadopse.UserControls
             
             string[] pinakas = cosm.getAllHistory();
             gemismahistory(pinakas);
+            megethos = 0;
         }
 
     
@@ -49,6 +53,7 @@ namespace testadopse.UserControls
         {
             labels = new Label[pinakas.Length];
             pinakas = revertpinaka(pinakas);
+            help1 = 0;
             for (int i = 0; i < pinakas.Length; i++)
             {
                 labels[i] = new Label();
@@ -92,15 +97,19 @@ namespace testadopse.UserControls
                 historytime.Font = new Font("Century Gothic", 12);
                 historytime.AutoSize = true;
                 historytime.Location = new Point(220, help1 + 50);
+                historytime.Name = "historytime_" + i + 1;
                 panel2.Controls.Add(historytime);
 
                 historylemma.ForeColor = System.Drawing.Color.Green;
                 historylemma.Font = new Font("Century Gothic", 12);
                 historylemma.AutoSize = true;
                 historylemma.Location = new Point(350, help1 + 50);
+                historylemma.Name = "historylemma_" + i + 1;
                 panel2.Controls.Add(historylemma);
 
                 cb.Location = new Point(150, help1 + 50);
+                cb.CheckStateChanged += ChkBox_CheckedChanged;
+                cb.Name = "cb_" + i + 1;
                 panel2.Controls.Add(cb);
 
                 hdate = historyday.Text;
@@ -125,6 +134,10 @@ namespace testadopse.UserControls
             }
             return pinakas2;
         }
+        
+        //
+        //     Methodos gia na pairnw to mhna apo noumero se tex! Paradeigma (to 1 ginetai Ianouariou)
+        //
 
         public string setmhnas(string str)
         {
@@ -173,6 +186,9 @@ namespace testadopse.UserControls
         
         }
 
+        //
+        //    Methodos gia na spaw to string kai na pairnw auta pou thelw 
+        //
         public static string Between(string value, string a, string b)
         {
             int posA = value.IndexOf(a, +1);
@@ -192,6 +208,10 @@ namespace testadopse.UserControls
             }
             return value.Substring(adjustedPosA, posB - adjustedPosA);
         }
+
+        //
+        //    Methodos gia na spaw to string kai na pairnw auta pou thelw 
+        //
 
         public static string Between2(string value, string a, string b)
         {
@@ -213,8 +233,24 @@ namespace testadopse.UserControls
             return value.Substring(adjustedPosA, posB - adjustedPosA);
         }
 
+        private void DeleteB_Click(object sender, EventArgs e)
+        {
+            if (DeleteAll.Checked) { cosm.DeleteAllHistory(); panel2.Controls.Clear(); }
+            if (DeleteHour.Checked) { cosm.DeleteHistoryBeforeOneHour(); this.Refresh(); }
+            if (DeleteDay.Checked) { cosm.DeleteHistoryBeforeOneDay(); this.Refresh(); }         
+        }
+
+        private void ChkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox ChkBox = sender as CheckBox;
+            var result3 = ChkBox.Name.Substring(ChkBox.Name.LastIndexOf('_') + 1);
+            string arithmos = result3.ToString();
 
 
-
+            if (ChkBox.Checked == true)
+            {
+                //deletehistory[megethos] = arithmos;
+            }
+        }
     }
 }

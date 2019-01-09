@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.DeleteHour = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.DeleteDay = new System.Windows.Forms.RadioButton();
+            this.DeleteWeek = new System.Windows.Forms.RadioButton();
+            this.DeleteAll = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.DeleteB = new System.Windows.Forms.Button();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.DeleteB = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,19 +63,19 @@
             this.radioButton1.Text = "Αναζήτησης";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // DeleteHour
             // 
-            this.radioButton2.AllowDrop = true;
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.radioButton2.ForeColor = System.Drawing.Color.Black;
-            this.radioButton2.Location = new System.Drawing.Point(21, 234);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(133, 21);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Τελευταίας ώρας";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.DeleteHour.AllowDrop = true;
+            this.DeleteHour.AutoSize = true;
+            this.DeleteHour.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.DeleteHour.ForeColor = System.Drawing.Color.Black;
+            this.DeleteHour.Location = new System.Drawing.Point(21, 234);
+            this.DeleteHour.Name = "DeleteHour";
+            this.DeleteHour.Size = new System.Drawing.Size(133, 21);
+            this.DeleteHour.TabIndex = 0;
+            this.DeleteHour.TabStop = true;
+            this.DeleteHour.Text = "Τελευταίας ώρας";
+            this.DeleteHour.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -89,47 +89,47 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Τύπος Ιστορικού:";
             // 
-            // radioButton4
+            // DeleteDay
             // 
-            this.radioButton4.AllowDrop = true;
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.radioButton4.ForeColor = System.Drawing.Color.Black;
-            this.radioButton4.Location = new System.Drawing.Point(21, 264);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(73, 21);
-            this.radioButton4.TabIndex = 0;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Σήμερα";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.DeleteDay.AllowDrop = true;
+            this.DeleteDay.AutoSize = true;
+            this.DeleteDay.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.DeleteDay.ForeColor = System.Drawing.Color.Black;
+            this.DeleteDay.Location = new System.Drawing.Point(21, 264);
+            this.DeleteDay.Name = "DeleteDay";
+            this.DeleteDay.Size = new System.Drawing.Size(73, 21);
+            this.DeleteDay.TabIndex = 0;
+            this.DeleteDay.TabStop = true;
+            this.DeleteDay.Text = "Σήμερα";
+            this.DeleteDay.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // DeleteWeek
             // 
-            this.radioButton5.AllowDrop = true;
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.radioButton5.ForeColor = System.Drawing.Color.Black;
-            this.radioButton5.Location = new System.Drawing.Point(21, 294);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(90, 21);
-            this.radioButton5.TabIndex = 0;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Βδομάδας";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.DeleteWeek.AllowDrop = true;
+            this.DeleteWeek.AutoSize = true;
+            this.DeleteWeek.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.DeleteWeek.ForeColor = System.Drawing.Color.Black;
+            this.DeleteWeek.Location = new System.Drawing.Point(21, 294);
+            this.DeleteWeek.Name = "DeleteWeek";
+            this.DeleteWeek.Size = new System.Drawing.Size(90, 21);
+            this.DeleteWeek.TabIndex = 0;
+            this.DeleteWeek.TabStop = true;
+            this.DeleteWeek.Text = "Βδομάδας";
+            this.DeleteWeek.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // DeleteAll
             // 
-            this.radioButton6.AllowDrop = true;
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.radioButton6.ForeColor = System.Drawing.Color.Black;
-            this.radioButton6.Location = new System.Drawing.Point(21, 324);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(101, 21);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Ολόκληρου";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.DeleteAll.AllowDrop = true;
+            this.DeleteAll.AutoSize = true;
+            this.DeleteAll.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.DeleteAll.ForeColor = System.Drawing.Color.Black;
+            this.DeleteAll.Location = new System.Drawing.Point(21, 324);
+            this.DeleteAll.Name = "DeleteAll";
+            this.DeleteAll.Size = new System.Drawing.Size(101, 21);
+            this.DeleteAll.TabIndex = 0;
+            this.DeleteAll.TabStop = true;
+            this.DeleteAll.Text = "Ολόκληρου";
+            this.DeleteAll.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -161,11 +161,11 @@
             this.panel4.Controls.Add(this.DeleteB);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.radioButton6);
-            this.panel4.Controls.Add(this.radioButton5);
-            this.panel4.Controls.Add(this.radioButton4);
+            this.panel4.Controls.Add(this.DeleteAll);
+            this.panel4.Controls.Add(this.DeleteWeek);
+            this.panel4.Controls.Add(this.DeleteDay);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.radioButton2);
+            this.panel4.Controls.Add(this.DeleteHour);
             this.panel4.Controls.Add(this.radioButton1);
             this.panel4.Controls.Add(this.radioButton3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
@@ -173,6 +173,33 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(214, 547);
             this.panel4.TabIndex = 17;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(36, 134);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 30);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Εμφάνιση";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // DeleteB
+            // 
+            this.DeleteB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(126)))), ((int)(((byte)(241)))));
+            this.DeleteB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.DeleteB.ForeColor = System.Drawing.Color.White;
+            this.DeleteB.Location = new System.Drawing.Point(36, 382);
+            this.DeleteB.Name = "DeleteB";
+            this.DeleteB.Size = new System.Drawing.Size(130, 30);
+            this.DeleteB.TabIndex = 3;
+            this.DeleteB.Text = "Διαγραφή";
+            this.DeleteB.UseVisualStyleBackColor = false;
+            this.DeleteB.Click += new System.EventHandler(this.DeleteB_Click);
             // 
             // radioButton3
             // 
@@ -247,28 +274,6 @@
             this.panel2.Size = new System.Drawing.Size(777, 547);
             this.panel2.TabIndex = 1;
             // 
-            // DeleteB
-            // 
-            this.DeleteB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.DeleteB.ForeColor = System.Drawing.Color.Black;
-            this.DeleteB.Location = new System.Drawing.Point(36, 382);
-            this.DeleteB.Name = "DeleteB";
-            this.DeleteB.Size = new System.Drawing.Size(130, 30);
-            this.DeleteB.TabIndex = 3;
-            this.DeleteB.Text = "Διαγραφή";
-            this.DeleteB.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(36, 134);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 30);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Εμφάνιση";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // HistoryUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -289,11 +294,11 @@
         #endregion
 
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton DeleteHour;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton DeleteDay;
+        private System.Windows.Forms.RadioButton DeleteWeek;
+        private System.Windows.Forms.RadioButton DeleteAll;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
