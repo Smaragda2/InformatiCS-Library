@@ -50,9 +50,9 @@
             this.TermsB = new System.Windows.Forms.Button();
             this.HistoryB = new System.Windows.Forms.Button();
             this.ContentP = new System.Windows.Forms.Panel();
+            this.homepage1 = new testadopse.UserControls.Homepage();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.homepage1 = new testadopse.UserControls.Homepage();
             this.HeaderP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -257,7 +257,7 @@
             // 
             // MenuP
             // 
-            this.MenuP.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.MenuP.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.MenuP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MenuP.Controls.Add(this.label2);
             this.MenuP.Controls.Add(this.panel2);
@@ -349,15 +349,6 @@
             this.ContentP.TabIndex = 8;
             this.ContentP.Click += new System.EventHandler(this.ChangeColour);
             // 
-            // timer
-            // 
-            this.timer.Interval = 30;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // homepage1
             // 
             this.homepage1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -366,6 +357,15 @@
             this.homepage1.Name = "homepage1";
             this.homepage1.Size = new System.Drawing.Size(1110, 517);
             this.homepage1.TabIndex = 0;
+            // 
+            // timer
+            // 
+            this.timer.Interval = 30;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
