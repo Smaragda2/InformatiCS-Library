@@ -15,8 +15,6 @@ namespace testadopse
     class CategoryLemmaMedia
     {
         private int i;
-        private Category_LemmaTableAdapter category_LemmaTableAdapter = new Category_LemmaTableAdapter();
-
 
         private LemmaMedia txt_and_media;
         private Category cat;
@@ -52,6 +50,7 @@ namespace testadopse
             }
             return results;
         }
+
 
     }
 }

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Lucene.Net.Index;
+using Lucene.Net.Search;
+using Lucene.Net.Store;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -9,7 +12,6 @@ namespace testadopse
 {
     class Category
     {
-        private CategoryTableAdapter categoryTableAdapter = new CategoryTableAdapter();
         private int i;
 
         private int id;
@@ -21,13 +23,43 @@ namespace testadopse
         /// </summary>
         public string[] get_all_categories()
         {
+            string[] categories  = GetAllCategories();
+            return categories;
+        }
+
+        private string[] GetAllCategories()
+        {
             string[] categories = null;
-            DataTable dataTable = categoryTableAdapter.GetAllCategories();
-            categories = new string[dataTable.Rows.Count];
-            i = 0;
-            foreach (DataRow row in dataTable.Rows)
+
+            string directory = System.IO.Directory.GetCurrentDirectory();
+            string[] splitDir = directory.Split('\\');
+            if (splitDir[splitDir.Length - 1] == "Debug")
             {
-                categories[i++] = row[1].ToString();
+                System.IO.Directory.SetCurrentDirectory("..\\..");
+            }
+
+            string indexDir = "IndexCategory";
+            using (Lucene.Net.Store.Directory dir = FSDirectory.Open(indexDir))
+            using (IndexSearcher searcher = new IndexSearcher(dir))
+            {
+                Term term;
+                WildcardQuery q = null;
+                BooleanQuery bq = new BooleanQuery();
+
+                term = new Term("Cname", "*");
+
+                q = new WildcardQuery(term);
+
+                bq.Add(q, Occur.MUST);
+
+                TopDocs hits = searcher.Search(bq, 1);
+
+                int j = 0;
+                foreach (ScoreDoc d in hits.ScoreDocs)
+                {
+                    Lucene.Net.Documents.Document doc = searcher.Doc(d.Doc);
+                    categories[j++] = doc.Get("Cname").ToString();
+                }
             }
             return categories;
         }

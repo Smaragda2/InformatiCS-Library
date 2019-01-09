@@ -29,8 +29,7 @@ namespace InformaticsModel
 {
     class LemmaMedia
     {
-        private string article = null;
-        private Lemma_MediaTableAdapter lemma_MediaTableAdapter = new Lemma_MediaTableAdapter();
+        private string article;
         private int i;
 
         private Media[] media_of_lemma;
@@ -67,6 +66,13 @@ namespace InformaticsModel
         /// </summary>
         public string[] Search(string query)
         {
+            string directory = System.IO.Directory.GetCurrentDirectory();
+            string[] splitDir = directory.Split('\\');
+            if (splitDir[splitDir.Length - 1] == "Debug")
+            {
+                System.IO.Directory.SetCurrentDirectory("..\\..\\");
+            }
+
             string[] results = null;
             string indexDir = "Index";
             using (Lucene.Net.Store.Directory dir = FSDirectory.Open(indexDir))
@@ -115,7 +121,7 @@ namespace InformaticsModel
                     splited = newQuery.Split(' ');
                     for (int i = 0; i < splited.Length; i++)
                     {
-                        term = new Term("Content", "*" + splited[i] + "*");
+                        term = new Term("Content", "*" + splited[i].ToLower() + "*");
                         q = new WildcardQuery(term);
                         bq.Add(q, Occur.SHOULD);
                     }
@@ -127,11 +133,12 @@ namespace InformaticsModel
                     bq.Add(q, Occur.MUST);
                 }
 
-                TopDocs hits = searcher.Search(bq, 50);
+                TopDocs hits = searcher.Search(bq, 100);
 
                 //lbl.Text +=  "Found " + hits.TotalHits + " documents matched query '" + bq + "':\n";
                 int j = 0;
-                results = new string[hits.TotalHits];
+                results = new string[100];
+
                 foreach (ScoreDoc d in hits.ScoreDocs)
                 {
                     Lucene.Net.Documents.Document doc = searcher.Doc(d.Doc);
@@ -148,9 +155,8 @@ namespace InformaticsModel
         /// <para>title sent the Label that have the Lemma tilte.</para>
         /// <para>content sent the Label tha have the Lemma content.</para>
         /// </summary>
-        public void Print(PrintDialog printDialog1, PrintDocument printDocument1, Label title, Label content)
+        public void Print(PrintDialog printDialog1, PrintDocument printDocument1)
         {
-            article = title.Text + "\n" + content.Text;
             printDialog1.Document = printDocument1;
 
             if (printDialog1.ShowDialog() == DialogResult.OK)
@@ -163,9 +169,11 @@ namespace InformaticsModel
         /// Call this method in printDocument1_PrintPage event.
         /// <para>Paramaters is the same with the event method.</para>
         /// </summary>
-        public void PrintPage(object sender, PrintPageEventArgs e)
+        public void PrintPage(object sender, PrintPageEventArgs e, Label title, Label content)
         {
-            e.Graphics.DrawString(article, new System.Drawing.Font("Arial", 14, FontStyle.Bold), Brushes.Black, 150, 125);
+            article = title.Text + "\n" + content.Text;
+
+            e.Graphics.DrawString(article, new System.Drawing.Font("Arial", 13, FontStyle.Regular), Brushes.Black,25, 50);
         }
 
         /// <summary>
@@ -175,10 +183,42 @@ namespace InformaticsModel
         /// </summary>
         public string GetLemmaContent(string lemmaName)
         {
-            string content = null;
-            content = lemma_MediaTableAdapter.GetLemmaContentByLemmaName(lemmaName).ToString();
-            return content;
+            string directory = System.IO.Directory.GetCurrentDirectory();
+            string[] splitDir = directory.Split('\\');
+            if (splitDir[splitDir.Length - 1] == "Debug")
+            {
+                System.IO.Directory.SetCurrentDirectory("..\\..");
+            }
+            string[] splitLemmaName = lemmaName.Split('(');
+
+            string results = null;
+            string indexDir = "Index";
+            using (Lucene.Net.Store.Directory dir = FSDirectory.Open(indexDir))
+            using (IndexSearcher searcher = new IndexSearcher(dir))
+            {
+                Term term,term2;
+                WildcardQuery q,q2 = null;
+                BooleanQuery bq = new BooleanQuery();
+
+                term = new Term("title", "*" + splitLemmaName[0].ToLower() + "*");
+
+                q = new WildcardQuery(term);
+
+                bq.Add(q, Occur.MUST);
+
+                TopDocs hits = searcher.Search(bq, 1);
+
+
+                foreach (ScoreDoc d in hits.ScoreDocs)
+                {
+                    Lucene.Net.Documents.Document doc = searcher.Doc(d.Doc);
+                    results = doc.Get("Content").ToString();
+                }
+            }
+            return results;
         }
+
+
 
         /// <summary>
         /// Get the paths of Lemmas Images.
@@ -187,18 +227,54 @@ namespace InformaticsModel
         /// </summary>
         public string[] GetLemmaImagesPath(string lemmaName)
         {
-            string[] imagesPath = null;
-            i = 0;
-            DataTable dataTable = lemma_MediaTableAdapter.GetImagePathsByLemmaName(lemmaName);
-            imagesPath = new string[dataTable.Rows.Count];
-            string s = null;
-            foreach (DataRow row in dataTable.Rows)
+            string directory = System.IO.Directory.GetCurrentDirectory();
+            string[] splitDir = directory.Split('\\');
+            if (splitDir[splitDir.Length - 1] == "Debug")
             {
-                s = row[3].ToString() + row[4].ToString();
-                imagesPath[i++] = s;
+                System.IO.Directory.SetCurrentDirectory("..\\..");
             }
-            return imagesPath;
+
+            string[] splitLemmaName = lemmaName.Split('(');
+            string[] imageTypes = new string[]{ "jpg", "svg" , "png", "gif" };
+
+            string[] results = null;
+            string indexDir = "Index";
+            using (Lucene.Net.Store.Directory dir = FSDirectory.Open(indexDir))
+            using (IndexSearcher searcher = new IndexSearcher(dir))
+            {
+                Term term, term2;
+                WildcardQuery q, q2 = null;
+                BooleanQuery bq = new BooleanQuery();
+
+                term = new Term("title", "*" + splitLemmaName[0].ToLower() + "*");
+                q = new WildcardQuery(term);
+                bq.Add(q, Occur.MUST);
+
+
+                TopDocs hits = searcher.Search(bq,10);
+
+                int j = 0;
+                if(hits.TotalHits > 10)
+                    results = new string[10];
+                else
+                    results = new string[hits.TotalHits+1];
+                results[j++] = "hits:" + hits.TotalHits;
+                foreach (ScoreDoc d in hits.ScoreDocs)
+                {
+                 
+                    Lucene.Net.Documents.Document doc = searcher.Doc(d.Doc);
+                    foreach(string type in imageTypes)
+                    {
+                        if (doc.Get("dataType").ToString() == type)
+                        {
+                            results[j++] = doc.Get("Content").ToString() + "." + doc.Get("dataType").ToString();
+                        }
+                    }
+                }
+            }
+            return results;
         }
+
 
 
         public void navigate_where_to_export_pdf_text_only(String text)

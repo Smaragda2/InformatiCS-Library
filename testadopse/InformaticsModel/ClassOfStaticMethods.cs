@@ -24,24 +24,15 @@ namespace testadopse
         
         public void addLemmaToHistory(int lemmaid)
         {
-            using (OleDbConnection myCon = new OleDbConnection(testadopse.Properties.Settings.Default.FinalConnectionString))
+            try
             {
-                //String timestamp = "2009-04-21 16:25:53";
-                String timestamp = System.DateTime.Now.ToString();
-                OleDbCommand cmd = new OleDbCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "insert into History_keep_Lemma(LemmaID,HistoryTimestamp) values (@param2,@param3)";
-                
-                cmd.Parameters.AddWithValue("@param2", lemmaid);
-                cmd.Parameters.AddWithValue("@param3", timestamp);
-                cmd.Connection = myCon;
-                myCon.Open();
-                cmd.ExecuteNonQuery();
-                myCon.Close();
-                //System.Windows.Forms.MessageBox.Show("An Item has been successfully added", "Caption", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                DateTime timestamp = System.DateTime.Now;
+                history_Keep_LemmaTableAdapter.Insert(lemmaid, timestamp);
             }
-
-
+            catch( OleDbException ex)
+            {
+                
+            }
         }
         /// <summary>
         /// Returns an array of string.
@@ -51,7 +42,6 @@ namespace testadopse
         /// 
         public string[] getAllHistory()
         {
-
             string[] results = null;
             string rowData = null;
             i = 0;
@@ -72,7 +62,7 @@ namespace testadopse
         /// </summary>
         public void DeleteAllHistory()
         {
-           // history_Keep_LemmaTableAdapter.DeleteAllHistory();
+           //history_Keep_LemmaTableAdapter.DeleteAllHistory();
         }
 
         /// <summary>
@@ -80,7 +70,7 @@ namespace testadopse
         /// </summary>
         public void DeleteHistoryBeforeOneHour()
         {
-           // history_Keep_LemmaTableAdapter.DeleteHistoryBeforeOneHour();
+           //history_Keep_LemmaTableAdapter.DeleteHistoryBeforeOneHour();
         }
 
         /// <summary>
@@ -100,6 +90,7 @@ namespace testadopse
         /// </summary>
         public string[] GetAllBookmarks()
         {
+
             string[] bookmarks = null;
             DataTable dataTable = bookmarkTableAdapter.GetAllBookmarks();
             bookmarks = new string[dataTable.Rows.Count];

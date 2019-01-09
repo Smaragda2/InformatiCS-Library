@@ -12,5 +12,7 @@ namespace testadopse
         private String content;
         public String getContent() { throw new NotImplementedException(); }
         public void setAll(String id, String type, String content) { }
+
+
     }
 }
