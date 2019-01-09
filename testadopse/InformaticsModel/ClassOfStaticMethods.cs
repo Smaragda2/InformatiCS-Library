@@ -67,6 +67,30 @@ namespace testadopse
             return results;
         }
 
+        /// <summary>
+        ///  Delete ALL the history.
+        /// </summary>
+        public void DeleteAllHistory()
+        {
+            history_Keep_LemmaTableAdapter.DeleteAllHistory();
+        }
+
+        /// <summary>
+        /// Delete all the history that is greater OR equals ">=" of ONE (1) Hour.
+        /// </summary>
+        public void DeleteHistoryBeforeOneHour()
+        {
+            history_Keep_LemmaTableAdapter.DeleteHistoryBeforeOneHour();
+        }
+
+        /// <summary>
+        /// Delete all the history that is greater OR equals ">=" of ONE (1) DAY.
+        /// </summary>
+        public void DeleteHistoryBeforeOneDay()
+        {
+            history_Keep_LemmaTableAdapter.DeleteHistoryBeforeOneDay();
+        }
+
 
         public static Collection<Object> ShowHistory() { throw new NotImplementedException(); }
 
