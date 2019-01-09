@@ -72,7 +72,7 @@ namespace testadopse
         /// </summary>
         public void DeleteAllHistory()
         {
-            history_Keep_LemmaTableAdapter.DeleteAllHistory();
+           // history_Keep_LemmaTableAdapter.DeleteAllHistory();
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace testadopse
         /// </summary>
         public void DeleteHistoryBeforeOneHour()
         {
-            history_Keep_LemmaTableAdapter.DeleteHistoryBeforeOneHour();
+           // history_Keep_LemmaTableAdapter.DeleteHistoryBeforeOneHour();
         }
 
         /// <summary>
@@ -88,9 +88,8 @@ namespace testadopse
         /// </summary>
         public void DeleteHistoryBeforeOneDay()
         {
-            history_Keep_LemmaTableAdapter.DeleteHistoryBeforeOneDay();
+           // history_Keep_LemmaTableAdapter.DeleteHistoryBeforeOneDay();
         }
-
 
         public static Collection<Object> ShowHistory() { throw new NotImplementedException(); }
 
