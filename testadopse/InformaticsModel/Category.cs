@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
-using testadopse.InformatiCS_LibraryDataSet1TableAdapters;
+using testadopse.InformatiCS_LibraryDataSetTableAdapters;
 
 namespace testadopse
 {
@@ -23,45 +23,48 @@ namespace testadopse
         /// </summary>
         public string[] get_all_categories()
         {
-            string[] categories  = GetAllCategories();
+            string[] categories = GetAllCategories();
             return categories;
         }
 
         private string[] GetAllCategories()
         {
-            string[] categories = null;
-
             string directory = System.IO.Directory.GetCurrentDirectory();
             string[] splitDir = directory.Split('\\');
             if (splitDir[splitDir.Length - 1] == "Debug")
             {
-                System.IO.Directory.SetCurrentDirectory("..\\..");
+                System.IO.Directory.SetCurrentDirectory("..\\..\\");
             }
 
-            string indexDir = "IndexCategory";
+            string[] results = null;
+            string indexDir = "IndexCategoryOnly";
             using (Lucene.Net.Store.Directory dir = FSDirectory.Open(indexDir))
             using (IndexSearcher searcher = new IndexSearcher(dir))
             {
+                // QueryParser parser = new QueryParser(LVersion.LUCENE_30, "Content", new StandardAnalyzer(LVersion.LUCENE_30));
+                //Query q = parser.Parse(newQuery);
                 Term term;
                 WildcardQuery q = null;
                 BooleanQuery bq = new BooleanQuery();
 
-                term = new Term("Cname", "*");
-
+                term = new Term("Cname", "***");
                 q = new WildcardQuery(term);
-
                 bq.Add(q, Occur.MUST);
 
-                TopDocs hits = searcher.Search(bq, 1);
+                TopDocs hits = searcher.Search(bq, 20000);
 
+                //lbl.Text +=  "Found " + hits.TotalHits + " documents matched query '" + bq + "':\n";
                 int j = 0;
+                results = new string[hits.TotalHits];
+
                 foreach (ScoreDoc d in hits.ScoreDocs)
                 {
                     Lucene.Net.Documents.Document doc = searcher.Doc(d.Doc);
-                    categories[j++] = doc.Get("Cname").ToString();
+                    results[j++] = doc.Get("Cname").ToString();
                 }
             }
-            return categories;
+            return results;
         }
     }
 }
+

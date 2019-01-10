@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
-using testadopse.InformatiCS_LibraryDataSet1TableAdapters;
+using testadopse.InformatiCS_LibraryDataSetTableAdapters;
 
 
 namespace testadopse

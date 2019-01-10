@@ -7,7 +7,7 @@ using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using testadopse.InformatiCS_LibraryDataSet1TableAdapters;
+using testadopse.InformatiCS_LibraryDataSetTableAdapters;
 using Lucene.Net.Documents;
 using Lucene.Net.Search;
 using Lucene.Net;
@@ -257,11 +257,9 @@ namespace InformaticsModel
                 if(hits.TotalHits > 10)
                     results = new string[10];
                 else
-                    results = new string[hits.TotalHits+1];
-                results[j++] = "hits:" + hits.TotalHits;
+                    results = new string[hits.TotalHits];
                 foreach (ScoreDoc d in hits.ScoreDocs)
                 {
-                 
                     Lucene.Net.Documents.Document doc = searcher.Doc(d.Doc);
                     foreach(string type in imageTypes)
                     {

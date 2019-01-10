@@ -5,7 +5,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Linq;
 using System.Text;
-using testadopse.InformatiCS_LibraryDataSet1TableAdapters;
+using testadopse.InformatiCS_LibraryDataSetTableAdapters;
 
 using iTextSharp.text;
 using iTextSharp.text.pdf;
@@ -21,17 +21,24 @@ namespace testadopse
         private History_keep_LemmaTableAdapter history_Keep_LemmaTableAdapter = new History_keep_LemmaTableAdapter();
         private BookmarkTableAdapter bookmarkTableAdapter = new BookmarkTableAdapter();
 
-        
+
         public void addLemmaToHistory(int lemmaid)
         {
-            try
+            using (OleDbConnection myCon = new OleDbConnection(testadopse.Properties.Settings.Default.FinalConnectionString))
             {
-                DateTime timestamp = System.DateTime.Now;
-                history_Keep_LemmaTableAdapter.Insert(lemmaid, timestamp);
-            }
-            catch( OleDbException ex)
-            {
-                
+                //String timestamp = "2009-04-21 16:25:53";
+                String timestamp = System.DateTime.Now.ToString();
+                OleDbCommand cmd = new OleDbCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "insert into History_keep_Lemma(LemmaID,HistoryTimestamp) values (@param2,@param3)";
+
+                cmd.Parameters.AddWithValue("@param2", lemmaid);
+                cmd.Parameters.AddWithValue("@param3", timestamp);
+                cmd.Connection = myCon;
+                myCon.Open();
+                cmd.ExecuteNonQuery();
+                myCon.Close();
+                //System.Windows.Forms.MessageBox.Show("An Item has been successfully added", "Caption", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             }
         }
         /// <summary>
@@ -50,9 +57,8 @@ namespace testadopse
 
             foreach (DataRow row in newTable.Rows)
             {
-                rowData = row[1].ToString() + "," + row[2].ToString();
+                rowData = row[0].ToString() + "," + row[1].ToString();
                 results[i++] = rowData;
-                Console.WriteLine(i - 1 + " = " + rowData);
             }
             return results;
         }
