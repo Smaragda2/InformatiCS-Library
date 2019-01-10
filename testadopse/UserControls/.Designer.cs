@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Category 1");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Category 2");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Category 3");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Category 4");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Category 5");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Category 6");
             this.CategoriesP = new System.Windows.Forms.Panel();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -57,25 +51,6 @@
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Node0";
-            treeNode1.Text = "Category 1";
-            treeNode2.Name = "Node1";
-            treeNode2.Text = "Category 2";
-            treeNode3.Name = "Node2";
-            treeNode3.Text = "Category 3";
-            treeNode4.Name = "Node3";
-            treeNode4.Text = "Category 4";
-            treeNode5.Name = "Node4";
-            treeNode5.Text = "Category 5";
-            treeNode6.Name = "Node5";
-            treeNode6.Text = "Category 6";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode6});
             this.treeView1.Size = new System.Drawing.Size(172, 661);
             this.treeView1.TabIndex = 0;
             // 

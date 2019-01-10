@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using InformaticsModel;
 
 namespace testadopse.UserControls
 {
@@ -68,18 +69,31 @@ namespace testadopse.UserControls
                 labels[i].Text = pinakas[i].ToString();
 
                 
-                string[] data2 = labels[i].Text.Split('/');
-                historyday.Text = data2[0];
-                historymonth.Text = data2[1];
-                historymonth.Text = setmhnas(historymonth.Text);
-                historyyear.Text = Between2(labels[i].Text,"/" , " ");
-                historydate.Text = historyday.Text + " & " + historymonth.Text + " & " + historyyear.Text;         
-                string[] data = labels[i].Text.Split(' ');
-                historytime.Text = data[1];
-                historytime.Text = Between(labels[i].Text, " " , ",");
+                string[] data2 = labels[i].Text.Split(',');
 
-                var result = labels[i].Text.Substring(labels[i].Text.LastIndexOf(',') + 1);
-                historylemma.Text = result.ToString();
+                Lemma lemma = new Lemma();
+                int id;
+                Int32.TryParse(data2[0], out id);
+                labels[i].Text = lemma.getLemmaNamebyLemmaID(id);
+
+
+                string[] split = data2[1].Split(' ');
+                string[] split2 = split[0].Split('-');
+                string[] splitTime = split[1].Split(':');
+
+                historyday.Text = split2[0];
+                historymonth.Text = split2[1];
+                historymonth.Text = setmhnas(historymonth.Text);
+                historyyear.Text = split2[2];
+
+
+
+                historydate.Text = historyday.Text + " & " + historymonth.Text + " & " + historyyear.Text;         
+                //string[] data = labels[i].Text.Split(' ');
+                historytime.Text = splitTime[0]+":"+splitTime[1];
+
+                //var result = labels[i].Text.Substring(labels[i].Text.LastIndexOf(',') + 1);
+                historylemma.Text = labels[i].Text.ToString();
 
 
                 if (historyday.Text != hdate)

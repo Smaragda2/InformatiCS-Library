@@ -24,7 +24,6 @@ namespace testadopse.UserControls
             BookMarkP.Visible = false;
             hide = true;
             hide2 = true;
-
         }
 
         private void AdvSearchB_Click(object sender, EventArgs e)

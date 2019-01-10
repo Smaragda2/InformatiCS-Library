@@ -68,12 +68,14 @@ namespace testadopse.UserControls
         public Label[] gemismalabel(string[] pinakas)
         {
             labels = new Label[pinakas.Length];
+
             if (pinakas.Length > 0)
             {
-                for (int i = 0; i < pinakas.Length; i++)
+                int i = 0;
+                foreach(string pinaka in pinakas)
                 {
                     labels[i] = new Label();
-                    labels[i].Text = pinakas[i].ToString();
+                    labels[i].Text = pinaka;
                     labels[i].ForeColor = System.Drawing.Color.FromArgb(128, 128, 255);
                     labels[i].Font = new Font("Century Gothic", 15, FontStyle.Bold);
                     labels[i].Location = new Point(40, i * 80 + 10);
@@ -82,6 +84,7 @@ namespace testadopse.UserControls
                     labels[i].MouseLeave += OnMouseLeave;
                     panel2.Controls.Add(labels[i]);
                     panel2.Refresh();
+                    i++;
                 }
             }
             else
@@ -268,10 +271,7 @@ namespace testadopse.UserControls
         private void PrintB_Click(object sender, EventArgs e)
         {
             LemmaMedia lm = new LemmaMedia();
-            Label lname = new Label();
-            Label ltext = new Label();
-
-            if (lemmatext != null) lm.Print(printDialog1, printDocument1, lname, ltext);
+            if (lemmatext != null) lm.Print(printDialog1, printDocument1);
             else MessageBox.Show("Δεν έχετε επιλέξει λήμμα");
 
         }
@@ -288,6 +288,14 @@ namespace testadopse.UserControls
             }
         }
 
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Label lname = new Label();
+            Label ltext = new Label();
+            lname.Text = lemmaname;
+            ltext.Text = lemmatext;
 
+            lm.PrintPage(sender, e, lname, ltext);
+        }
     }
 }

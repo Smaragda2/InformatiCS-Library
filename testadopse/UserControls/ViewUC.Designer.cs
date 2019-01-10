@@ -145,7 +145,7 @@
             this.textBox1.MaximumSize = new System.Drawing.Size(674, 25);
             this.textBox1.MinimumSize = new System.Drawing.Size(600, 25);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(600, 26);
+            this.textBox1.Size = new System.Drawing.Size(600, 35);
             this.textBox1.TabIndex = 0;
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.enter_click);
@@ -165,9 +165,13 @@
             // 
             this.printDialog1.UseEXDialog = true;
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
             // ViewUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
